@@ -1,0 +1,2004 @@
+<!DOCTYPE html>
+<html lang="en" class="dark"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>ZZViral Prompts | Viral AI Videos &amp; Prompts</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800;900&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-green: #10b981;
+      --brand-teal: #2dd4bf;
+      --bg-deep: #060a12;
+    }
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background-color: var(--bg-deep);
+      color: #f8fafc;
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Hide Scrollbars */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    /* =======================================================
+       SMALL TOP-CENTER C-DANCE 2.5 GOLD PILL IN HEADER
+    ======================================================== */
+    .cdance-slim-pill {
+      background: linear-gradient(180deg, #161616 0%, #070707 100%);
+      border: 1px solid rgba(251, 191, 36, 0.75);
+      box-shadow: 0 0 12px rgba(245, 158, 11, 0.28);
+      transition: all 0.2s ease;
+    }
+    .cdance-slim-pill:hover {
+      border-color: #fde047;
+      box-shadow: 0 0 18px rgba(251, 191, 36, 0.5);
+    }
+    .cdance-gold-txt {
+      background: linear-gradient(180deg, #fef08a 0%, #fbbf24 55%, #d97706 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .cdance-mini-badge {
+      background: linear-gradient(180deg, #fde047 0%, #f59e0b 100%);
+      color: #09090b;
+    }
+
+    /* Glass Header & Modals */
+    .nav-glass {
+      background: rgba(6, 10, 18, 0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(16, 185, 129, 0.16);
+    }
+    .glass-modal {
+      background: rgba(8, 13, 24, 0.96);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(16, 185, 129, 0.15);
+    }
+
+    /* Hero Badge & Buttons */
+    .hero-pill-badge {
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.38);
+      box-shadow: 0 0 18px rgba(16, 185, 129, 0.12);
+    }
+    .btn-emerald-glow {
+      background: #10b981;
+      color: #04130e;
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+      transition: all 0.22s ease;
+    }
+    .btn-emerald-glow:hover {
+      background: #34d399;
+      transform: translateY(-1px);
+      box-shadow: 0 0 28px rgba(16, 185, 129, 0.7);
+    }
+    .btn-dark-glass {
+      background: rgba(15, 23, 42, 0.78);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      color: #f8fafc;
+      transition: all 0.22s ease;
+    }
+    .btn-dark-glass:hover {
+      border-color: rgba(16, 185, 129, 0.55);
+      background: rgba(16, 185, 129, 0.1);
+    }
+
+    /* Responsive Video Cards */
+    .video-card {
+      position: relative;
+      background: linear-gradient(155deg, rgba(13, 20, 36, 0.95), rgba(6, 10, 18, 0.99));
+      border: 1px solid rgba(16, 185, 129, 0.26);
+      box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.85);
+      transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.28s ease, box-shadow 0.28s ease;
+    }
+    @media (hover: hover) {
+      .video-card:hover {
+        transform: translateY(-5px);
+        border-color: #10b981;
+        box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.95), 0 0 22px rgba(16, 185, 129, 0.3);
+      }
+    }
+
+    /* Bottom-Right Glowing Prompt Button */
+    .prompt-btn {
+      background: linear-gradient(135deg, #10b981, #06b6d4);
+      color: #031510;
+      box-shadow: 0 0 12px rgba(16, 185, 129, 0.65);
+      transition: all 0.2s ease;
+    }
+    .prompt-btn:hover, .prompt-btn:active {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.95);
+    }
+
+    /* Aspect Ratios */
+    .aspect-9-16 { aspect-ratio: 9 / 16; }
+    .aspect-16-9 { aspect-ratio: 16 / 9; }
+
+    /* =======================================================
+       FLOATING WHATSAPP BUTTON
+    ======================================================== */
+    @keyframes waHaloPulse {
+      0%, 100% { transform: scale(1); opacity: 0.3; }
+      50% { transform: scale(1.2); opacity: 0.45; }
+    }
+    @keyframes waRippleOut {
+      0% { transform: scale(0.95); opacity: 0.5; }
+      100% { transform: scale(1.7); opacity: 0; }
+    }
+    .wa-outer-halo {
+      position: absolute;
+      inset: -7px;
+      border-radius: 9999px;
+      background: rgba(34, 197, 94, 0.26);
+      animation: waHaloPulse 2.8s ease-in-out infinite;
+      pointer-events: none;
+    }
+    .wa-expanding-wave {
+      position: absolute;
+      inset: 0;
+      border-radius: 9999px;
+      background: rgba(34, 197, 94, 0.32);
+      animation: waRippleOut 2.4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+      pointer-events: none;
+    }
+    .wa-main-circle {
+      position: relative;
+      z-index: 10;
+      width: 44px;
+      height: 44px;
+      border-radius: 9999px;
+      background: linear-gradient(145deg, #25d366, #16a34a);
+      box-shadow: 0 6px 20px rgba(34, 197, 94, 0.55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    @media (min-width: 640px) {
+      .wa-main-circle { width: 52px; height: 52px; }
+    }
+    .wa-main-circle:hover {
+      transform: scale(1.08);
+      box-shadow: 0 10px 28px rgba(34, 197, 94, 0.85);
+    }
+  </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.bottom-4{bottom:1rem}.bottom-5{bottom:1.25rem}.left-2\.5{left:0.625rem}.left-4{left:1rem}.right-4{right:1rem}.right-5{right:1.25rem}.top-0{top:0px}.top-2{top:0.5rem}.top-4{top:1rem}.bottom-2{bottom:0.5rem}.left-2{left:0.5rem}.right-2{right:0.5rem}.z-0{z-index:0}.z-10{z-index:10}.z-40{z-index:40}.z-50{z-index:50}.z-20{z-index:20}.mx-auto{margin-left:auto;margin-right:auto}.my-auto{margin-top:auto;margin-bottom:auto}.mb-1{margin-bottom:0.25rem}.mb-2\.5{margin-bottom:0.625rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.ml-1{margin-left:0.25rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-1\.5{margin-top:0.375rem}.line-clamp-2{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-10{height:2.5rem}.h-12{height:3rem}.h-3{height:0.75rem}.h-6{height:1.5rem}.h-8{height:2rem}.h-full{height:100%}.h-9{height:2.25rem}.max-h-\[94vh\]{max-height:94vh}.min-h-screen{min-height:100vh}.w-10{width:2.5rem}.w-12{width:3rem}.w-3{width:0.75rem}.w-32{width:8rem}.w-6{width:1.5rem}.w-8{width:2rem}.w-full{width:100%}.w-9{width:2.25rem}.min-w-0{min-width:0px}.max-w-3xl{max-width:48rem}.max-w-5xl{max-width:64rem}.max-w-6xl{max-width:72rem}.max-w-7xl{max-width:80rem}.max-w-full{max-width:100%}.max-w-sm{max-width:24rem}.max-w-xl{max-width:36rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;user-select:none}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-2\.5{gap:0.625rem}.gap-3{gap:0.75rem}.gap-3\.5{gap:0.875rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.gap-0\.5{gap:0.125rem}.gap-x-2{column-gap:0.5rem}.gap-y-0\.5{row-gap:0.125rem}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-2\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.625rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.625rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}.space-y-7 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.75rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.whitespace-nowrap{white-space:nowrap}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-amber-500\/35{border-color:rgb(245 158 11 / 0.35)}.border-emerald-400\/40{border-color:rgb(52 211 153 / 0.4)}.border-emerald-500\/15{border-color:rgb(16 185 129 / 0.15)}.border-emerald-500\/25{border-color:rgb(16 185 129 / 0.25)}.border-emerald-500\/30{border-color:rgb(16 185 129 / 0.3)}.border-emerald-500\/35{border-color:rgb(16 185 129 / 0.35)}.border-emerald-500\/40{border-color:rgb(16 185 129 / 0.4)}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.border-teal-400{--tw-border-opacity:1;border-color:rgb(45 212 191 / var(--tw-border-opacity, 1))}.border-teal-500\/25{border-color:rgb(20 184 166 / 0.25)}.border-teal-500\/30{border-color:rgb(20 184 166 / 0.3)}.border-teal-500\/35{border-color:rgb(20 184 166 / 0.35)}.border-teal-500\/40{border-color:rgb(20 184 166 / 0.4)}.border-white\/5{border-color:rgb(255 255 255 / 0.05)}.border-\[\#10b981\]{--tw-border-opacity:1;border-color:rgb(16 185 129 / var(--tw-border-opacity, 1))}.border-emerald-400\/35{border-color:rgb(52 211 153 / 0.35)}.border-white\/15{border-color:rgb(255 255 255 / 0.15)}.border-rose-500\/30{border-color:rgb(244 63 94 / 0.3)}.bg-\[\#04070d\]{--tw-bg-opacity:1;background-color:rgb(4 7 13 / var(--tw-bg-opacity, 1))}.bg-\[\#04070d\]\/90{background-color:rgb(4 7 13 / 0.9)}.bg-\[\#050811\]{--tw-bg-opacity:1;background-color:rgb(5 8 17 / var(--tw-bg-opacity, 1))}.bg-\[\#060a12\]{--tw-bg-opacity:1;background-color:rgb(6 10 18 / var(--tw-bg-opacity, 1))}.bg-\[\#0b1220\]\/90{background-color:rgb(11 18 32 / 0.9)}.bg-\[\#10b981\]{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-black\/80{background-color:rgb(0 0 0 / 0.8)}.bg-black\/85{background-color:rgb(0 0 0 / 0.85)}.bg-emerald-500\/15{background-color:rgb(16 185 129 / 0.15)}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-800\/80{background-color:rgb(30 41 59 / 0.8)}.bg-slate-800\/90{background-color:rgb(30 41 59 / 0.9)}.bg-teal-500\/20{background-color:rgb(20 184 166 / 0.2)}.bg-\[\#050912\]{--tw-bg-opacity:1;background-color:rgb(5 9 18 / var(--tw-bg-opacity, 1))}.bg-\[\#0b1322\]\/90{background-color:rgb(11 19 34 / 0.9)}.bg-black\/65{background-color:rgb(0 0 0 / 0.65)}.bg-black\/70{background-color:rgb(0 0 0 / 0.7)}.bg-emerald-500\/20{background-color:rgb(16 185 129 / 0.2)}.bg-rose-500\/20{background-color:rgb(244 63 94 / 0.2)}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.bg-gradient-to-t{background-image:linear-gradient(to top, var(--tw-gradient-stops))}.from-emerald-400{--tw-gradient-from:#34d399 var(--tw-gradient-from-position);--tw-gradient-to:rgb(52 211 153 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-black\/90{--tw-gradient-from:rgb(0 0 0 / 0.9) var(--tw-gradient-from-position);--tw-gradient-to:rgb(0 0 0 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-black\/10{--tw-gradient-to:rgb(0 0 0 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), rgb(0 0 0 / 0.1) var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-teal-300{--tw-gradient-to:#5eead4 var(--tw-gradient-to-position)}.to-black\/30{--tw-gradient-to:rgb(0 0 0 / 0.3) var(--tw-gradient-to-position)}.object-cover{object-fit:cover}.p-2\.5{padding:0.625rem}.p-3\.5{padding:0.875rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-3{padding:0.75rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.pb-1{padding-bottom:0.25rem}.pb-24{padding-bottom:6rem}.pb-3\.5{padding-bottom:0.875rem}.pb-6{padding-bottom:1.5rem}.pl-7{padding-left:1.75rem}.pr-1{padding-right:0.25rem}.pr-2\.5{padding-right:0.625rem}.pt-1{padding-top:0.25rem}.pt-1\.5{padding-top:0.375rem}.pt-2{padding-top:0.5rem}.pt-5{padding-top:1.25rem}.text-center{text-align:center}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[9px\]{font-size:9px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-\[8px\]{font-size:8px}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-\[1\.15\]{line-height:1.15}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-\[0\.16em\]{letter-spacing:0.16em}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-wide{letter-spacing:0.025em}.text-\[\#10b981\]{--tw-text-opacity:1;color:rgb(16 185 129 / var(--tw-text-opacity, 1))}.text-\[\#2dd4bf\]{--tw-text-opacity:1;color:rgb(45 212 191 / var(--tw-text-opacity, 1))}.text-\[\#fde047\]{--tw-text-opacity:1;color:rgb(253 224 71 / var(--tw-text-opacity, 1))}.text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}.text-amber-500\/50{color:rgb(245 158 11 / 0.5)}.text-black{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183 / var(--tw-text-opacity, 1))}.text-emerald-300\/80{color:rgb(110 231 183 / 0.8)}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.text-rose-400{--tw-text-opacity:1;color:rgb(251 113 133 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-teal-300{--tw-text-opacity:1;color:rgb(94 234 212 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-rose-300{--tw-text-opacity:1;color:rgb(253 164 175 / var(--tw-text-opacity, 1))}.placeholder-slate-400::placeholder{--tw-placeholder-opacity:1;color:rgb(148 163 184 / var(--tw-placeholder-opacity, 1))}.opacity-0{opacity:0}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-\[0_0_16px_rgba\(16\2c 185\2c 129\2c 0\.7\)\]{--tw-shadow:0 0 16px rgba(16,185,129,0.7);--tw-shadow-colored:0 0 16px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-\[0_0_20px_rgba\(16\2c 185\2c 129\2c 0\.6\)\]{--tw-shadow:0 0 20px rgba(16,185,129,0.6);--tw-shadow-colored:0 0 20px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.drop-shadow-md{--tw-drop-shadow:drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-lg{--tw-backdrop-blur:blur(16px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.duration-300{transition-duration:300ms}.selection\:bg-emerald-400 *::selection{--tw-bg-opacity:1;background-color:rgb(52 211 153 / var(--tw-bg-opacity, 1))}.selection\:text-black *::selection{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.selection\:bg-emerald-400::selection{--tw-bg-opacity:1;background-color:rgb(52 211 153 / var(--tw-bg-opacity, 1))}.selection\:text-black::selection{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.file\:mr-2::file-selector-button{margin-right:0.5rem}.file\:rounded-lg::file-selector-button{border-radius:0.5rem}.file\:border-0::file-selector-button{border-width:0px}.file\:bg-emerald-500\/20::file-selector-button{background-color:rgb(16 185 129 / 0.2)}.file\:bg-teal-500\/20::file-selector-button{background-color:rgb(20 184 166 / 0.2)}.file\:px-2\.5::file-selector-button{padding-left:0.625rem;padding-right:0.625rem}.file\:py-1::file-selector-button{padding-top:0.25rem;padding-bottom:0.25rem}.file\:text-emerald-300::file-selector-button{--tw-text-opacity:1;color:rgb(110 231 183 / var(--tw-text-opacity, 1))}.file\:text-teal-300::file-selector-button{--tw-text-opacity:1;color:rgb(94 234 212 / var(--tw-text-opacity, 1))}.hover\:border-emerald-400:hover{--tw-border-opacity:1;border-color:rgb(52 211 153 / var(--tw-border-opacity, 1))}.hover\:bg-rose-500\/30:hover{background-color:rgb(244 63 94 / 0.3)}.hover\:bg-rose-500\/40:hover{background-color:rgb(244 63 94 / 0.4)}.hover\:bg-teal-500\/30:hover{background-color:rgb(20 184 166 / 0.3)}.hover\:bg-black\/85:hover{background-color:rgb(0 0 0 / 0.85)}.hover\:bg-emerald-500\/30:hover{background-color:rgb(16 185 129 / 0.3)}.hover\:bg-slate-700:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.hover\:text-\[\#10b981\]:hover{--tw-text-opacity:1;color:rgb(16 185 129 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:text-rose-200:hover{--tw-text-opacity:1;color:rgb(254 205 211 / var(--tw-text-opacity, 1))}.focus\:border-emerald-400:focus{--tw-border-opacity:1;border-color:rgb(52 211 153 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.group:hover .group-hover\:scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width: 640px){.sm\:bottom-6{bottom:1.5rem}.sm\:left-6{left:1.5rem}.sm\:bottom-2\.5{bottom:0.625rem}.sm\:left-2\.5{left:0.625rem}.sm\:right-2\.5{right:0.625rem}.sm\:mb-4{margin-bottom:1rem}.sm\:mb-6{margin-bottom:1.5rem}.sm\:mb-8{margin-bottom:2rem}.sm\:inline-flex{display:inline-flex}.sm\:h-14{height:3.5rem}.sm\:h-3\.5{height:0.875rem}.sm\:h-7{height:1.75rem}.sm\:h-12{height:3rem}.sm\:w-3\.5{width:0.875rem}.sm\:w-48{width:12rem}.sm\:w-7{width:1.75rem}.sm\:w-12{width:3rem}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:items-center{align-items:center}.sm\:gap-2{gap:0.5rem}.sm\:gap-3\.5{gap:0.875rem}.sm\:gap-4{gap:1rem}.sm\:space-y-10 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2.5rem * var(--tw-space-y-reverse))}.sm\:rounded-2xl{border-radius:1rem}.sm\:rounded-xl{border-radius:0.75rem}.sm\:p-5{padding:1.25rem}.sm\:p-6{padding:1.5rem}.sm\:p-7{padding:1.75rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.sm\:px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.sm\:px-5{padding-left:1.25rem;padding-right:1.25rem}.sm\:py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.sm\:py-2{padding-top:0.5rem;padding-bottom:0.5rem}.sm\:pb-14{padding-bottom:3.5rem}.sm\:pt-12{padding-top:3rem}.sm\:text-left{text-align:left}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:text-\[10px\]{font-size:10px}.sm\:text-\[11px\]{font-size:11px}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-sm{font-size:0.875rem;line-height:1.25rem}.sm\:text-xl{font-size:1.25rem;line-height:1.75rem}.sm\:text-xs{font-size:0.75rem;line-height:1rem}}@media (min-width: 768px){.md\:col-span-2{grid-column:span 2 / span 2}.md\:flex{display:flex}.md\:w-56{width:14rem}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-5xl{font-size:3rem;line-height:1}}@media (min-width: 1024px){.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}}</style></head>
+<body class="min-h-screen relative selection:bg-emerald-400 selection:text-black">
+
+  <!-- =======================================================
+       3D WIREFRAME WAVE TERRAIN MESH BACKGROUND CANVAS
+  ======================================================== -->
+  <canvas id="terrainWaveCanvas" class="fixed inset-0 w-full h-full pointer-events-none z-0" width="1272" height="588"></canvas>
+
+  <!-- =======================================================
+       COMPACT STICKY HEADER WITH SMALL TOP-CENTER PROMO PILL
+  ======================================================== -->
+  <header class="sticky top-0 z-40 nav-glass">
+    
+    <!-- SMALL TOP-CENTER PROMO STRIP (No WhatsApp Icon, Clean Compact Text) -->
+    <div class="w-full flex justify-center px-2 pt-1.5 pb-1 border-b border-white/5">
+      <a id="topPromoBannerLink" href="https://wa.me/923346599257?text=Hi%2C%20I%20want%20C-Dance%202.5%20(Only%20%243.50)" target="_blank" rel="noopener noreferrer" class="cdance-slim-pill inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-0.5 px-3 py-1 rounded-full text-[10px] sm:text-xs leading-tight max-w-full">
+        
+        <span id="bannerBrandText" class="cdance-gold-txt font-black tracking-tight">C-Dance 2.5</span>
+        <span class="text-amber-500/50">|</span>
+        <span id="bannerHeadlineText" class="text-white font-semibold">Generate Unlimited Videos</span>
+        <span id="bannerSubPillText" class="cdance-mini-badge font-bold px-2 py-0.2 rounded-full text-[9px] sm:text-[10px]">Lifetime Access</span>
+        <span class="text-amber-500/50">|</span>
+        <span id="bannerPriceText" class="cdance-mini-badge font-extrabold px-2 py-0.2 rounded text-[9px] sm:text-[11px]">Only $3.50</span>
+        <span class="text-amber-500/50">|</span>
+        <span class="font-bold text-white">WhatsApp: <span id="bannerPhoneText" class="text-[#fde047] font-extrabold">+92 3346599257</span></span>
+      </a>
+    </div>
+
+    <!-- MAIN NAVBAR -->
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 h-12 sm:h-14 flex items-center justify-between gap-2">
+      
+      <!-- Top-Left Logo: ZZViral Prompts -->
+      <div id="siteLogoBtn" class="flex items-center cursor-pointer select-none shrink-0">
+        <span class="text-base sm:text-xl md:text-2xl font-extrabold tracking-tight">
+          <span id="logoZZText" class="text-[#10b981]">ZZ</span><span id="logoMainText" class="text-white">Viral Prompts</span>
+        </span>
+      </div>
+
+      <!-- Center Nav Links (PC) -->
+      <nav class="hidden md:flex items-center gap-6 text-xs sm:text-sm font-medium text-slate-300">
+        <a href="#heroTop" class="hover:text-[#10b981] transition-colors">Home</a>
+        <a href="#videosSection" id="navLatestLink" class="hover:text-[#10b981] transition-colors">Latest</a>
+        <a href="#videosSection" id="navTrendingLink" class="hover:text-[#10b981] transition-colors">Trending</a>
+        <a href="#videosSection" id="navViralLink" class="hover:text-[#10b981] transition-colors">Viral</a>
+      </nav>
+
+      <!-- Right Controls: Search + Explore + Secret Admin Button -->
+      <div class="flex items-center gap-2">
+        <div class="relative w-32 sm:w-48 md:w-56">
+          <input id="searchInput" type="text" placeholder="Search videos..." class="w-full bg-[#0b1220]/90 text-[11px] sm:text-xs text-white placeholder-slate-400 rounded-full pl-7 pr-2.5 py-1.5 border border-emerald-500/25 focus:outline-none focus:border-emerald-400 transition-all">
+          <svg class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-400 absolute left-2.5 top-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </div>
+
+        <a href="#videosSection" class="hidden sm:inline-flex px-3.5 py-1.5 rounded-full text-[11px] font-extrabold uppercase tracking-wider btn-emerald-glow">
+          EXPLORE
+        </a>
+
+        <!-- Secret Admin Button (Hidden by default) -->
+        <button id="editWebsiteBtn" class="items-center gap-1 px-3 py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-emerald-400 to-teal-300 text-black shadow-[0_0_16px_rgba(16,185,129,0.7)] flex">
+          <span>⚡ Edit</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =======================================================
+       MAIN CONTENT (Mobile & PC Optimized)
+  ======================================================== -->
+  <main id="heroTop" class="relative z-10 max-w-6xl mx-auto px-3 sm:px-6 lg:px-8">
+
+    <!-- Compact Responsive Hero Section -->
+    <section class="pt-5 pb-6 sm:pt-12 sm:pb-14 text-center max-w-3xl mx-auto">
+      <div class="inline-flex items-center px-3.5 py-1 rounded-full hero-pill-badge mb-3 sm:mb-4">
+        <span id="heroBadgeText" class="text-[9px] sm:text-[11px] font-semibold uppercase tracking-[0.16em] text-[#2dd4bf]">VIRAL AI VIDEOS &amp; ONE-CLICK PROMPTS HUB</span>
+      </div>
+
+      <h1 class="text-xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-[1.15] mb-2.5 sm:mb-4">
+        <span id="heroTitleLine1" class="block text-white">Discover &amp; Create Next-Gen</span>
+        <span id="heroTitleLine2" class="block text-[#2dd4bf] mt-0.5">Viral AI Videos &amp; Prompts</span>
+      </h1>
+
+      <p id="heroSubtitleText" class="text-slate-400 text-[11px] sm:text-base max-w-xl mx-auto leading-relaxed mb-4 sm:mb-6 px-1 font-normal">Tap any video thumbnail to watch in full quality, and click Prompt to open the exact generation prompt in a new tab.</p>
+
+      <div class="flex items-center justify-center gap-2.5 sm:gap-3.5">
+        <a href="#videosSection" class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm btn-emerald-glow">
+          Watch Videos
+        </a>
+        <a id="heroContactBtn" href="https://wa.me/923346599257" target="_blank" rel="noopener noreferrer" class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm btn-dark-glass">
+          Contact Us
+        </a>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         CATEGORIES & VIDEO GALLERY SECTION
+    ======================================================== -->
+    <section id="videosSection" class="pt-1 pb-24">
+      <!-- Category Pills -->
+      <div class="flex items-center justify-center mb-5 sm:mb-8 overflow-x-auto no-scrollbar">
+        <div id="categoryFilterBar" class="flex items-center gap-1.5 sm:gap-2 py-1 px-1"><button data-cat="All" class="cat-pill-btn whitespace-nowrap px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-bold tracking-wide transition-all btn-emerald-glow">All</button><button data-cat="Latest" class="cat-pill-btn whitespace-nowrap px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-bold tracking-wide transition-all bg-[#0b1322]/90 text-slate-300 border border-emerald-500/25 hover:border-emerald-400 hover:text-white">Latest</button><button data-cat="Trending" class="cat-pill-btn whitespace-nowrap px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-bold tracking-wide transition-all bg-[#0b1322]/90 text-slate-300 border border-emerald-500/25 hover:border-emerald-400 hover:text-white">Trending</button><button data-cat="Viral" class="cat-pill-btn whitespace-nowrap px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-bold tracking-wide transition-all bg-[#0b1322]/90 text-slate-300 border border-emerald-500/25 hover:border-emerald-400 hover:text-white">Viral</button><button data-cat="3D AI" class="cat-pill-btn whitespace-nowrap px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-bold tracking-wide transition-all bg-[#0b1322]/90 text-slate-300 border border-emerald-500/25 hover:border-emerald-400 hover:text-white">3D AI</button><button data-cat="Cinematic" class="cat-pill-btn whitespace-nowrap px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-bold tracking-wide transition-all bg-[#0b1322]/90 text-slate-300 border border-emerald-500/25 hover:border-emerald-400 hover:text-white">Cinematic</button></div>
+      </div>
+
+      <!-- Video Rows Container -->
+      <div id="videoRowsContainer" class="space-y-7 sm:space-y-10"><section class="space-y-3">
+        
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2.5 sm:gap-4">
+        <article class="video-card rounded-xl sm:rounded-2xl overflow-hidden flex flex-col ">
+          <div data-id="v_1792768745947" class="video-media-area relative w-full aspect-9-16 bg-[#050912] overflow-hidden cursor-pointer group">
+            
+            <video src="https://res.cloudinary.com/s0cx2xpd/video/upload/v1792768551/Red-10.mp4" poster="https://res.cloudinary.com/s0cx2xpd/image/upload/v1792768526/Dogs_Acting_drama.jpg" loop="" playsinline="" preload="metadata" class="w-full h-full object-cover"></video>
+            <img src="https://res.cloudinary.com/s0cx2xpd/image/upload/v1792768526/Dogs_Acting_drama.jpg" alt="Dogs Acting drama" class="thumb-overlay absolute inset-0 w-full h-full object-cover transition-opacity duration-300 pointer-events-none">
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-black/30 pointer-events-none z-10"></div>
+
+            <!-- Top-Left Category Badge & Top-Right Audio/Fullscreen Controls -->
+            <div class="absolute top-2 left-2 right-2 flex items-center justify-between gap-1 z-20">
+              <span class="px-2 py-0.5 rounded-full text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-black/70 text-[#2dd4bf] border border-emerald-400/35 backdrop-blur-md pointer-events-none">
+                Latest
+              </span>
+
+              
+              <div class="video-top-ctrl flex items-center gap-1">
+                <button type="button" class="mute-toggle-btn w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-black/65 hover:bg-black/85 border border-white/15 text-[10px] flex items-center justify-center text-white backdrop-blur-md" title="Mute / Unmute">🔊</button>
+                <button type="button" class="fs-toggle-btn w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-black/65 hover:bg-black/85 border border-white/15 text-[10px] flex items-center justify-center text-white backdrop-blur-md" title="Fullscreen">⛶</button>
+              </div>
+              
+            </div>
+
+            <!-- Center Play Button Overlay -->
+            <div class="play-badge absolute inset-0 flex items-center justify-center pointer-events-none z-20 transition-all duration-200 group-hover:scale-110">
+              <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-black/65 border border-[#10b981] flex items-center justify-center text-[#2dd4bf] text-xs sm:text-base shadow-[0_0_20px_rgba(16,185,129,0.6)]">
+                ▶
+              </div>
+            </div>
+
+            <!-- Bottom-Left Title & Bottom-Right "Prompt" Button -->
+            <div class="absolute bottom-2 left-2 right-2 sm:bottom-2.5 sm:left-2.5 sm:right-2.5 flex items-end justify-between gap-1.5 z-20">
+              <div class="pr-1 pointer-events-none min-w-0">
+                <h3 class="font-bold text-[10px] sm:text-sm text-white leading-tight line-clamp-2 drop-shadow-md">Dogs Acting drama</h3>
+              </div>
+
+              <a href="https://igetintopc.exblog.jp/38850346/" target="_blank" rel="noopener noreferrer" class="card-prompt-link shrink-0 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg sm:rounded-xl font-extrabold text-[9px] sm:text-xs prompt-btn flex items-center gap-0.5">
+                <span>Prompt</span>
+                <span>↗</span>
+              </a>
+            </div>
+
+          </div>
+        </article>
+      
+        <article class="video-card rounded-xl sm:rounded-2xl overflow-hidden flex flex-col ">
+          <div data-id="v_1792768659180" class="video-media-area relative w-full aspect-9-16 bg-[#050912] overflow-hidden cursor-pointer group">
+            
+            <video src="https://res.cloudinary.com/s0cx2xpd/video/upload/v1792768551/Red-11.mp4" poster="https://res.cloudinary.com/s0cx2xpd/image/upload/v1792768527/Natural_Born_Actors.jpg" loop="" playsinline="" preload="metadata" class="w-full h-full object-cover"></video>
+            <img src="https://res.cloudinary.com/s0cx2xpd/image/upload/v1792768527/Natural_Born_Actors.jpg" alt="atural Born Actors" class="thumb-overlay absolute inset-0 w-full h-full object-cover transition-opacity duration-300 pointer-events-none">
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-black/30 pointer-events-none z-10"></div>
+
+            <!-- Top-Left Category Badge & Top-Right Audio/Fullscreen Controls -->
+            <div class="absolute top-2 left-2 right-2 flex items-center justify-between gap-1 z-20">
+              <span class="px-2 py-0.5 rounded-full text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-black/70 text-[#2dd4bf] border border-emerald-400/35 backdrop-blur-md pointer-events-none">
+                Latest
+              </span>
+
+              
+              <div class="video-top-ctrl flex items-center gap-1">
+                <button type="button" class="mute-toggle-btn w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-black/65 hover:bg-black/85 border border-white/15 text-[10px] flex items-center justify-center text-white backdrop-blur-md" title="Mute / Unmute">🔊</button>
+                <button type="button" class="fs-toggle-btn w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-black/65 hover:bg-black/85 border border-white/15 text-[10px] flex items-center justify-center text-white backdrop-blur-md" title="Fullscreen">⛶</button>
+              </div>
+              
+            </div>
+
+            <!-- Center Play Button Overlay -->
+            <div class="play-badge absolute inset-0 flex items-center justify-center pointer-events-none z-20 transition-all duration-200 group-hover:scale-110">
+              <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-black/65 border border-[#10b981] flex items-center justify-center text-[#2dd4bf] text-xs sm:text-base shadow-[0_0_20px_rgba(16,185,129,0.6)]">
+                ▶
+              </div>
+            </div>
+
+            <!-- Bottom-Left Title & Bottom-Right "Prompt" Button -->
+            <div class="absolute bottom-2 left-2 right-2 sm:bottom-2.5 sm:left-2.5 sm:right-2.5 flex items-end justify-between gap-1.5 z-20">
+              <div class="pr-1 pointer-events-none min-w-0">
+                <h3 class="font-bold text-[10px] sm:text-sm text-white leading-tight line-clamp-2 drop-shadow-md">atural Born Actors</h3>
+              </div>
+
+              <a href="https://igetintopc.exblog.jp/38850346/" target="_blank" rel="noopener noreferrer" class="card-prompt-link shrink-0 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg sm:rounded-xl font-extrabold text-[9px] sm:text-xs prompt-btn flex items-center gap-0.5">
+                <span>Prompt</span>
+                <span>↗</span>
+              </a>
+            </div>
+
+          </div>
+        </article>
+      
+        <article class="video-card rounded-xl sm:rounded-2xl overflow-hidden flex flex-col ">
+          <div data-id="v_1792759716715" class="video-media-area relative w-full aspect-9-16 bg-[#050912] overflow-hidden cursor-pointer group">
+            
+            <video src="https://res.cloudinary.com/s0cx2xpd/video/upload/v1792758242/01_file.mp4" poster="https://res.cloudinary.com/s0cx2xpd/image/upload/v1792759515/OS_Hero_TN.jpg" loop="" playsinline="" preload="metadata" class="w-full h-full object-cover"></video>
+            <img src="https://res.cloudinary.com/s0cx2xpd/image/upload/v1792759515/OS_Hero_TN.jpg" alt="One Small Hero" class="thumb-overlay absolute inset-0 w-full h-full object-cover transition-opacity duration-300 pointer-events-none">
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-black/30 pointer-events-none z-10"></div>
+
+            <!-- Top-Left Category Badge & Top-Right Audio/Fullscreen Controls -->
+            <div class="absolute top-2 left-2 right-2 flex items-center justify-between gap-1 z-20">
+              <span class="px-2 py-0.5 rounded-full text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-black/70 text-[#2dd4bf] border border-emerald-400/35 backdrop-blur-md pointer-events-none">
+                Latest
+              </span>
+
+              
+              <div class="video-top-ctrl flex items-center gap-1">
+                <button type="button" class="mute-toggle-btn w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-black/65 hover:bg-black/85 border border-white/15 text-[10px] flex items-center justify-center text-white backdrop-blur-md" title="Mute / Unmute">🔊</button>
+                <button type="button" class="fs-toggle-btn w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-black/65 hover:bg-black/85 border border-white/15 text-[10px] flex items-center justify-center text-white backdrop-blur-md" title="Fullscreen">⛶</button>
+              </div>
+              
+            </div>
+
+            <!-- Center Play Button Overlay -->
+            <div class="play-badge absolute inset-0 flex items-center justify-center pointer-events-none z-20 transition-all duration-200 group-hover:scale-110">
+              <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-black/65 border border-[#10b981] flex items-center justify-center text-[#2dd4bf] text-xs sm:text-base shadow-[0_0_20px_rgba(16,185,129,0.6)]">
+                ▶
+              </div>
+            </div>
+
+            <!-- Bottom-Left Title & Bottom-Right "Prompt" Button -->
+            <div class="absolute bottom-2 left-2 right-2 sm:bottom-2.5 sm:left-2.5 sm:right-2.5 flex items-end justify-between gap-1.5 z-20">
+              <div class="pr-1 pointer-events-none min-w-0">
+                <h3 class="font-bold text-[10px] sm:text-sm text-white leading-tight line-clamp-2 drop-shadow-md">One Small Hero</h3>
+              </div>
+
+              <a href="https://igetintopc.exblog.jp/38850346/" target="_blank" rel="noopener noreferrer" class="card-prompt-link shrink-0 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg sm:rounded-xl font-extrabold text-[9px] sm:text-xs prompt-btn flex items-center gap-0.5">
+                <span>Prompt</span>
+                <span>↗</span>
+              </a>
+            </div>
+
+          </div>
+        </article>
+      
+        <article class="video-card rounded-xl sm:rounded-2xl overflow-hidden flex flex-col ">
+          <div data-id="v_1792604954501" class="video-media-area relative w-full aspect-9-16 bg-[#050912] overflow-hidden cursor-pointer group">
+            
+            <video src="https://res.cloudinary.com/s0cx2xpd/video/upload/v1792604842/safe_home.mp4" poster="https://res.cloudinary.com/s0cx2xpd/image/upload/v1792769431/New_Life.jpg" loop="" playsinline="" preload="metadata" class="w-full h-full object-cover"></video>
+            <img src="https://res.cloudinary.com/s0cx2xpd/image/upload/v1792769431/New_Life.jpg" alt="Safe Home" class="thumb-overlay absolute inset-0 w-full h-full object-cover transition-opacity duration-300 pointer-events-none">
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-black/30 pointer-events-none z-10"></div>
+
+            <!-- Top-Left Category Badge & Top-Right Audio/Fullscreen Controls -->
+            <div class="absolute top-2 left-2 right-2 flex items-center justify-between gap-1 z-20">
+              <span class="px-2 py-0.5 rounded-full text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-black/70 text-[#2dd4bf] border border-emerald-400/35 backdrop-blur-md pointer-events-none">
+                Viral
+              </span>
+
+              
+              <div class="video-top-ctrl flex items-center gap-1">
+                <button type="button" class="mute-toggle-btn w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-black/65 hover:bg-black/85 border border-white/15 text-[10px] flex items-center justify-center text-white backdrop-blur-md" title="Mute / Unmute">🔊</button>
+                <button type="button" class="fs-toggle-btn w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-black/65 hover:bg-black/85 border border-white/15 text-[10px] flex items-center justify-center text-white backdrop-blur-md" title="Fullscreen">⛶</button>
+              </div>
+              
+            </div>
+
+            <!-- Center Play Button Overlay -->
+            <div class="play-badge absolute inset-0 flex items-center justify-center pointer-events-none z-20 transition-all duration-200 group-hover:scale-110">
+              <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-black/65 border border-[#10b981] flex items-center justify-center text-[#2dd4bf] text-xs sm:text-base shadow-[0_0_20px_rgba(16,185,129,0.6)]">
+                ▶
+              </div>
+            </div>
+
+            <!-- Bottom-Left Title & Bottom-Right "Prompt" Button -->
+            <div class="absolute bottom-2 left-2 right-2 sm:bottom-2.5 sm:left-2.5 sm:right-2.5 flex items-end justify-between gap-1.5 z-20">
+              <div class="pr-1 pointer-events-none min-w-0">
+                <h3 class="font-bold text-[10px] sm:text-sm text-white leading-tight line-clamp-2 drop-shadow-md">Safe Home</h3>
+              </div>
+
+              <a href="https://igetintopc.exblog.jp/38607543/" target="_blank" rel="noopener noreferrer" class="card-prompt-link shrink-0 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg sm:rounded-xl font-extrabold text-[9px] sm:text-xs prompt-btn flex items-center gap-0.5">
+                <span>Prompt</span>
+                <span>↗</span>
+              </a>
+            </div>
+
+          </div>
+        </article>
+      </div>
+      </section><section class="space-y-3">
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-4">
+        <article class="video-card rounded-xl sm:rounded-2xl overflow-hidden flex flex-col ">
+          <div data-id="v_1792759601814" class="video-media-area relative w-full aspect-16-9 bg-[#050912] overflow-hidden cursor-pointer group">
+            
+            <video src="https://res.cloudinary.com/s0cx2xpd/video/upload/v1792758096/Red-6.mp4" poster="https://res.cloudinary.com/s0cx2xpd/image/upload/v1792759525/BLADE_SHOWDOWN.jpg" loop="" playsinline="" preload="metadata" class="w-full h-full object-cover"></video>
+            <img src="https://res.cloudinary.com/s0cx2xpd/image/upload/v1792759525/BLADE_SHOWDOWN.jpg" alt="BLADE SHOWDOWN" class="thumb-overlay absolute inset-0 w-full h-full object-cover transition-opacity duration-300 pointer-events-none">
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-black/30 pointer-events-none z-10"></div>
+
+            <!-- Top-Left Category Badge & Top-Right Audio/Fullscreen Controls -->
+            <div class="absolute top-2 left-2 right-2 flex items-center justify-between gap-1 z-20">
+              <span class="px-2 py-0.5 rounded-full text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-black/70 text-[#2dd4bf] border border-emerald-400/35 backdrop-blur-md pointer-events-none">
+                Trending
+              </span>
+
+              
+              <div class="video-top-ctrl flex items-center gap-1">
+                <button type="button" class="mute-toggle-btn w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-black/65 hover:bg-black/85 border border-white/15 text-[10px] flex items-center justify-center text-white backdrop-blur-md" title="Mute / Unmute">🔊</button>
+                <button type="button" class="fs-toggle-btn w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-black/65 hover:bg-black/85 border border-white/15 text-[10px] flex items-center justify-center text-white backdrop-blur-md" title="Fullscreen">⛶</button>
+              </div>
+              
+            </div>
+
+            <!-- Center Play Button Overlay -->
+            <div class="play-badge absolute inset-0 flex items-center justify-center pointer-events-none z-20 transition-all duration-200 group-hover:scale-110">
+              <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-black/65 border border-[#10b981] flex items-center justify-center text-[#2dd4bf] text-xs sm:text-base shadow-[0_0_20px_rgba(16,185,129,0.6)]">
+                ▶
+              </div>
+            </div>
+
+            <!-- Bottom-Left Title & Bottom-Right "Prompt" Button -->
+            <div class="absolute bottom-2 left-2 right-2 sm:bottom-2.5 sm:left-2.5 sm:right-2.5 flex items-end justify-between gap-1.5 z-20">
+              <div class="pr-1 pointer-events-none min-w-0">
+                <h3 class="font-bold text-[10px] sm:text-sm text-white leading-tight line-clamp-2 drop-shadow-md">BLADE SHOWDOWN</h3>
+              </div>
+
+              <a href="https://igetintopc.exblog.jp/38850346/" target="_blank" rel="noopener noreferrer" class="card-prompt-link shrink-0 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg sm:rounded-xl font-extrabold text-[9px] sm:text-xs prompt-btn flex items-center gap-0.5">
+                <span>Prompt</span>
+                <span>↗</span>
+              </a>
+            </div>
+
+          </div>
+        </article>
+      
+        <article class="video-card rounded-xl sm:rounded-2xl overflow-hidden flex flex-col ">
+          <div data-id="v_1792756961289" class="video-media-area relative w-full aspect-16-9 bg-[#050912] overflow-hidden cursor-pointer group">
+            
+            <video src="https://res.cloudinary.com/s0cx2xpd/video/upload/v1792756554/Red-8.mp4" poster="https://res.cloudinary.com/s0cx2xpd/image/upload/v1792756593/TS_Thumbnail.jpg" loop="" playsinline="" preload="metadata" class="w-full h-full object-cover"></video>
+            <img src="https://res.cloudinary.com/s0cx2xpd/image/upload/v1792756593/TS_Thumbnail.jpg" alt="Tiny Stylist" class="thumb-overlay absolute inset-0 w-full h-full object-cover transition-opacity duration-300 pointer-events-none">
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-black/30 pointer-events-none z-10"></div>
+
+            <!-- Top-Left Category Badge & Top-Right Audio/Fullscreen Controls -->
+            <div class="absolute top-2 left-2 right-2 flex items-center justify-between gap-1 z-20">
+              <span class="px-2 py-0.5 rounded-full text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-black/70 text-[#2dd4bf] border border-emerald-400/35 backdrop-blur-md pointer-events-none">
+                Latest
+              </span>
+
+              
+              <div class="video-top-ctrl flex items-center gap-1">
+                <button type="button" class="mute-toggle-btn w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-black/65 hover:bg-black/85 border border-white/15 text-[10px] flex items-center justify-center text-white backdrop-blur-md" title="Mute / Unmute">🔊</button>
+                <button type="button" class="fs-toggle-btn w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-black/65 hover:bg-black/85 border border-white/15 text-[10px] flex items-center justify-center text-white backdrop-blur-md" title="Fullscreen">⛶</button>
+              </div>
+              
+            </div>
+
+            <!-- Center Play Button Overlay -->
+            <div class="play-badge absolute inset-0 flex items-center justify-center pointer-events-none z-20 transition-all duration-200 group-hover:scale-110">
+              <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-black/65 border border-[#10b981] flex items-center justify-center text-[#2dd4bf] text-xs sm:text-base shadow-[0_0_20px_rgba(16,185,129,0.6)]">
+                ▶
+              </div>
+            </div>
+
+            <!-- Bottom-Left Title & Bottom-Right "Prompt" Button -->
+            <div class="absolute bottom-2 left-2 right-2 sm:bottom-2.5 sm:left-2.5 sm:right-2.5 flex items-end justify-between gap-1.5 z-20">
+              <div class="pr-1 pointer-events-none min-w-0">
+                <h3 class="font-bold text-[10px] sm:text-sm text-white leading-tight line-clamp-2 drop-shadow-md">Tiny Stylist</h3>
+              </div>
+
+              <a href="https://igetintopc.exblog.jp/38850346/" target="_blank" rel="noopener noreferrer" class="card-prompt-link shrink-0 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg sm:rounded-xl font-extrabold text-[9px] sm:text-xs prompt-btn flex items-center gap-0.5">
+                <span>Prompt</span>
+                <span>↗</span>
+              </a>
+            </div>
+
+          </div>
+        </article>
+      
+        <article class="video-card rounded-xl sm:rounded-2xl overflow-hidden flex flex-col ">
+          <div data-id="v_1792756875536" class="video-media-area relative w-full aspect-16-9 bg-[#050912] overflow-hidden cursor-pointer group">
+            
+            <video src="https://res.cloudinary.com/s0cx2xpd/video/upload/v1792756379/Red-9.mp4" poster="https://res.cloudinary.com/s0cx2xpd/image/upload/v1792756591/SR_Thumbnail.jpg" loop="" playsinline="" preload="metadata" class="w-full h-full object-cover"></video>
+            <img src="https://res.cloudinary.com/s0cx2xpd/image/upload/v1792756591/SR_Thumbnail.jpg" alt="Spicy Revenge" class="thumb-overlay absolute inset-0 w-full h-full object-cover transition-opacity duration-300 pointer-events-none">
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-black/30 pointer-events-none z-10"></div>
+
+            <!-- Top-Left Category Badge & Top-Right Audio/Fullscreen Controls -->
+            <div class="absolute top-2 left-2 right-2 flex items-center justify-between gap-1 z-20">
+              <span class="px-2 py-0.5 rounded-full text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-black/70 text-[#2dd4bf] border border-emerald-400/35 backdrop-blur-md pointer-events-none">
+                Latest
+              </span>
+
+              
+              <div class="video-top-ctrl flex items-center gap-1">
+                <button type="button" class="mute-toggle-btn w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-black/65 hover:bg-black/85 border border-white/15 text-[10px] flex items-center justify-center text-white backdrop-blur-md" title="Mute / Unmute">🔊</button>
+                <button type="button" class="fs-toggle-btn w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-black/65 hover:bg-black/85 border border-white/15 text-[10px] flex items-center justify-center text-white backdrop-blur-md" title="Fullscreen">⛶</button>
+              </div>
+              
+            </div>
+
+            <!-- Center Play Button Overlay -->
+            <div class="play-badge absolute inset-0 flex items-center justify-center pointer-events-none z-20 transition-all duration-200 group-hover:scale-110">
+              <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-black/65 border border-[#10b981] flex items-center justify-center text-[#2dd4bf] text-xs sm:text-base shadow-[0_0_20px_rgba(16,185,129,0.6)]">
+                ▶
+              </div>
+            </div>
+
+            <!-- Bottom-Left Title & Bottom-Right "Prompt" Button -->
+            <div class="absolute bottom-2 left-2 right-2 sm:bottom-2.5 sm:left-2.5 sm:right-2.5 flex items-end justify-between gap-1.5 z-20">
+              <div class="pr-1 pointer-events-none min-w-0">
+                <h3 class="font-bold text-[10px] sm:text-sm text-white leading-tight line-clamp-2 drop-shadow-md">Spicy Revenge</h3>
+              </div>
+
+              <a href="https://igetintopc.exblog.jp/38850346/" target="_blank" rel="noopener noreferrer" class="card-prompt-link shrink-0 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg sm:rounded-xl font-extrabold text-[9px] sm:text-xs prompt-btn flex items-center gap-0.5">
+                <span>Prompt</span>
+                <span>↗</span>
+              </a>
+            </div>
+
+          </div>
+        </article>
+      
+        <article class="video-card rounded-xl sm:rounded-2xl overflow-hidden flex flex-col ">
+          <div data-id="v_1792602855190" class="video-media-area relative w-full aspect-16-9 bg-[#050912] overflow-hidden cursor-pointer group">
+            
+            <video src="https://res.cloudinary.com/s0cx2xpd/video/upload/v1792602368/Reference_Video.mp4" poster="https://res.cloudinary.com/s0cx2xpd/video/upload/v1792602368/Reference_Video.jpg" loop="" playsinline="" preload="metadata" class="w-full h-full object-cover"></video>
+            <img src="https://res.cloudinary.com/s0cx2xpd/video/upload/v1792602368/Reference_Video.jpg" alt="A Little Courage Goes a Long Way" class="thumb-overlay absolute inset-0 w-full h-full object-cover transition-opacity duration-300 pointer-events-none">
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-black/30 pointer-events-none z-10"></div>
+
+            <!-- Top-Left Category Badge & Top-Right Audio/Fullscreen Controls -->
+            <div class="absolute top-2 left-2 right-2 flex items-center justify-between gap-1 z-20">
+              <span class="px-2 py-0.5 rounded-full text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-black/70 text-[#2dd4bf] border border-emerald-400/35 backdrop-blur-md pointer-events-none">
+                Viral
+              </span>
+
+              
+              <div class="video-top-ctrl flex items-center gap-1">
+                <button type="button" class="mute-toggle-btn w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-black/65 hover:bg-black/85 border border-white/15 text-[10px] flex items-center justify-center text-white backdrop-blur-md" title="Mute / Unmute">🔊</button>
+                <button type="button" class="fs-toggle-btn w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-black/65 hover:bg-black/85 border border-white/15 text-[10px] flex items-center justify-center text-white backdrop-blur-md" title="Fullscreen">⛶</button>
+              </div>
+              
+            </div>
+
+            <!-- Center Play Button Overlay -->
+            <div class="play-badge absolute inset-0 flex items-center justify-center pointer-events-none z-20 transition-all duration-200 group-hover:scale-110">
+              <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-black/65 border border-[#10b981] flex items-center justify-center text-[#2dd4bf] text-xs sm:text-base shadow-[0_0_20px_rgba(16,185,129,0.6)]">
+                ▶
+              </div>
+            </div>
+
+            <!-- Bottom-Left Title & Bottom-Right "Prompt" Button -->
+            <div class="absolute bottom-2 left-2 right-2 sm:bottom-2.5 sm:left-2.5 sm:right-2.5 flex items-end justify-between gap-1.5 z-20">
+              <div class="pr-1 pointer-events-none min-w-0">
+                <h3 class="font-bold text-[10px] sm:text-sm text-white leading-tight line-clamp-2 drop-shadow-md">A Little Courage Goes a Long Way</h3>
+              </div>
+
+              <a href="https://igetintopc.exblog.jp/38608005/" target="_blank" rel="noopener noreferrer" class="card-prompt-link shrink-0 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg sm:rounded-xl font-extrabold text-[9px] sm:text-xs prompt-btn flex items-center gap-0.5">
+                <span>Prompt</span>
+                <span>↗</span>
+              </a>
+            </div>
+
+          </div>
+        </article>
+      </div>
+      </section></div>
+    </section>
+
+  </main>
+
+  <!-- Clean Footer (Zero Mention of Admin Access) -->
+  <footer class="relative z-10 border-t border-emerald-500/15 bg-[#04070d]/90 py-6">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] sm:text-xs text-slate-400 text-center sm:text-left">
+      <div>
+        <span class="font-extrabold text-[#10b981]">ZZ</span><span class="font-extrabold text-white">Viral Prompts</span>
+        <span class="text-slate-500 ml-1">— Viral AI Videos &amp; Prompts Platform</span>
+      </div>
+      <div class="text-slate-500">
+        © 2026 ZZViral Prompts. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- =======================================================
+       FLOATING WHATSAPP BUTTON (+92 3346599257)
+  ======================================================== -->
+  <a id="floatingWhatsAppBtn" href="https://wa.me/923346599257" target="_blank" rel="noopener noreferrer" class="fixed bottom-4 left-4 sm:bottom-6 sm:left-6 z-40 flex items-center justify-center" title="Chat on WhatsApp">
+    <div class="relative flex items-center justify-center">
+      <div class="wa-outer-halo"></div>
+      <div class="wa-expanding-wave"></div>
+      <div class="wa-main-circle">
+        <svg class="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.52 3.48A11.77 11.77 0 0 0 12.04 0C5.46 0 .11 5.34.11 11.92c0 2.1.55 4.15 1.6 5.96L0 24l6.3-1.65a11.9 11.9 0 0 0 5.74 1.46h.01c6.58 0 11.93-5.34 11.93-11.92 0-3.18-1.24-6.18-3.46-8.41ZM12.05 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.74.98 1-3.64-.24-.37a9.86 9.86 0 0 1-1.52-5.26c0-5.45 4.44-9.89 9.91-9.89 2.64 0 5.13 1.03 7 2.9a9.83 9.83 0 0 1 2.9 7c0 5.46-4.44 9.89-9.9 9.89Z" fill="#FFFFFF"></path>
+          <path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.91-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z" fill="#FFFFFF"></path>
+        </svg>
+      </div>
+    </div>
+  </a>
+
+  <!-- =======================================================
+       SECURE ADMIN PASSWORD LOGIN MODAL (No Password Hint Shown)
+  ======================================================== -->
+  <div id="adminLoginModal" class="fixed inset-0 z-50 items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden">
+    <div class="relative w-full max-w-sm rounded-3xl glass-modal p-6">
+      <button id="closeAdminLoginBtn" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-800/80 hover:bg-rose-500/30 text-slate-300 flex items-center justify-center">✕</button>
+      
+      <div class="text-center mb-5">
+        <div class="w-12 h-12 rounded-2xl bg-emerald-500/15 border border-emerald-400/40 mx-auto flex items-center justify-center text-xl mb-2.5">🔐</div>
+        <h3 class="font-bold text-lg text-white">Admin Authentication</h3>
+        <p class="text-xs text-slate-400 mt-1">Enter your secret password to manage ZZViral Prompts.</p>
+      </div>
+
+      <form id="adminLoginForm" class="space-y-4">
+        <div>
+          <input id="adminPasswordInput" type="password" placeholder="Enter password..." required="" class="w-full bg-[#060a12] text-white text-sm rounded-xl px-4 py-2.5 border border-emerald-500/35 focus:outline-none focus:border-emerald-400">
+          <p id="adminLoginError" class="text-xs text-rose-400 mt-1.5 hidden">Invalid admin password.</p>
+        </div>
+        <button type="submit" class="w-full py-3 rounded-xl font-bold text-xs sm:text-sm btn-emerald-glow">
+          Login to Admin Studio ⚡
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- =======================================================
+       FULL ADMIN STUDIO & CMS MODAL
+  ======================================================== -->
+  <div id="adminDashboardModal" class="fixed inset-0 z-50 items-center justify-center p-2.5 sm:p-6 bg-black/85 backdrop-blur-lg overflow-y-auto flex">
+    <div class="relative w-full max-w-5xl rounded-3xl glass-modal p-4 sm:p-7 my-auto max-h-[94vh] flex flex-col">
+      
+      <div class="flex flex-wrap items-center justify-between gap-3 pb-3.5 border-b border-emerald-500/25">
+        <div class="flex items-center gap-2">
+          <span class="text-xl">⚡</span>
+          <div>
+            <h2 class="font-extrabold text-base sm:text-xl text-white">ZZViral Prompts — Admin Studio</h2>
+            <p class="text-[11px] text-emerald-300/80">Upload 9:16 &amp; 16:9 videos, thumbnails, and direct Prompt links.</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="exportVercelHtmlBtn" class="px-3 py-1.5 rounded-xl btn-emerald-glow font-bold text-[11px]">
+            💾 Download HTML (For Vercel)
+          </button>
+          <button id="closeAdminDashboardBtn" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-rose-500/40 text-white flex items-center justify-center">✕</button>
+        </div>
+      </div>
+
+      <!-- Admin Navigation Tabs -->
+      <div class="flex items-center gap-2 py-3 border-b border-slate-800 overflow-x-auto no-scrollbar">
+        <button data-admin-tab="upload" class="admin-tab-btn whitespace-nowrap px-3.5 py-1.5 rounded-xl text-xs font-bold bg-[#10b981] text-black">1. Upload Video &amp; Thumbnail</button>
+        <button data-admin-tab="posts" class="admin-tab-btn whitespace-nowrap px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-800/90 text-slate-300 hover:text-white">2. Manage Videos</button>
+        <button data-admin-tab="rows" class="admin-tab-btn whitespace-nowrap px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-800/90 text-slate-300 hover:text-white">3. Adjust Rows</button>
+        <button data-admin-tab="settings" class="admin-tab-btn whitespace-nowrap px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-800/90 text-slate-300 hover:text-white">4. Header Strip &amp; Settings</button>
+      </div>
+
+      <!-- Tab Panels Container -->
+      <div class="flex-1 overflow-y-auto no-scrollbar py-4 pr-1 space-y-5">
+
+        <!-- TAB 1: UPLOAD / EDIT VIDEO + RATIO-MATCHED THUMBNAIL -->
+        <div id="adminTabUpload" class="admin-tab-panel">
+          <form id="videoPostForm" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input type="hidden" id="editingVideoId" value="">
+
+            <div>
+              <label class="block text-xs font-semibold text-emerald-300 uppercase mb-1">Video Title *</label>
+              <input id="postTitleInput" type="text" required="" placeholder="e.g., Cyber Samurai AI Animation" class="w-full bg-[#060a12] text-white text-sm rounded-xl px-3.5 py-2 border border-emerald-500/35 focus:outline-none focus:border-emerald-400">
+            </div>
+
+            <div class="grid grid-cols-2 gap-2.5">
+              <div>
+                <label class="block text-xs font-semibold text-teal-300 uppercase mb-1">Video Ratio *</label>
+                <select id="postRatioInput" class="w-full bg-[#060a12] text-white text-sm rounded-xl px-3 py-2 border border-teal-500/35 focus:outline-none">
+                  <option value="9:16">9:16 (Vertical Short)</option>
+                  <option value="16:9">16:9 (Widescreen)</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-emerald-300 uppercase mb-1">Category *</label>
+                <select id="postCategoryInput" class="w-full bg-[#060a12] text-white text-sm rounded-xl px-3 py-2 border border-emerald-500/35 focus:outline-none"><option value="Latest">Latest</option><option value="Trending">Trending</option><option value="Viral">Viral</option><option value="3D AI">3D AI</option><option value="Cinematic">Cinematic</option></select>
+              </div>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-xs font-semibold text-emerald-300 uppercase mb-1">Prompt Button Direct Link (Opens in New Tab) *</label>
+              <input id="postPromptLinkInput" type="url" required="" placeholder="https://your-prompt-post-link.com/..." class="w-full bg-[#060a12] text-white text-sm rounded-xl px-3.5 py-2 border border-emerald-500/35 focus:outline-none focus:border-emerald-400">
+            </div>
+
+            <!-- Video Source Box -->
+            <div class="p-3.5 rounded-2xl bg-[#050811] border border-emerald-500/25 space-y-2">
+              <label class="block text-xs font-bold text-emerald-300 uppercase">Step 1: Video File or URL *</label>
+              <input id="postVideoUrlInput" type="text" required="" placeholder="Paste .mp4 link, YouTube/Shorts link, or choose file..." class="w-full bg-[#060a12] text-white text-xs sm:text-sm rounded-xl px-3 py-2 border border-emerald-500/35 focus:outline-none">
+              <div class="flex flex-wrap items-center justify-between gap-2 pt-1">
+                <input id="postVideoFileInput" type="file" accept="video/*" class="text-[11px] text-slate-300 file:mr-2 file:py-1 file:px-2.5 file:rounded-lg file:border-0 file:bg-emerald-500/20 file:text-emerald-300">
+                <button type="button" id="captureVideoFrameBtn" class="px-2.5 py-1 rounded-lg bg-teal-500/20 hover:bg-teal-500/30 text-teal-300 border border-teal-500/40 text-[11px] font-bold">
+                  📸 Auto-Capture Thumbnail
+                </button>
+              </div>
+            </div>
+
+            <!-- Thumbnail Source Box -->
+            <div class="p-3.5 rounded-2xl bg-[#050811] border border-teal-500/25 space-y-2">
+              <label class="block text-xs font-bold text-teal-300 uppercase">Step 2: Thumbnail (Fits 9:16 or 16:9)</label>
+              <input id="postThumbUrlInput" type="text" placeholder="Paste thumbnail URL or upload image below..." class="w-full bg-[#060a12] text-white text-xs sm:text-sm rounded-xl px-3 py-2 border border-teal-500/35 focus:outline-none">
+              <div class="flex items-center justify-between gap-2 pt-1">
+                <input id="postThumbFileInput" type="file" accept="image/*" class="text-[11px] text-slate-300 file:mr-2 file:py-1 file:px-2.5 file:rounded-lg file:border-0 file:bg-teal-500/20 file:text-teal-300">
+                <img id="adminThumbPreview" src="" alt="Preview" class="hidden w-10 h-10 rounded-lg object-cover border border-teal-400">
+              </div>
+            </div>
+
+            <div class="md:col-span-2 flex items-center gap-3 pt-1">
+              <button type="submit" id="saveVideoPostBtn" class="px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm btn-emerald-glow">🚀 Publish Video</button>
+              <button type="button" id="cancelEditPostBtn" class="px-4 py-2.5 rounded-xl text-xs font-semibold bg-slate-800 text-slate-300 hover:text-white hidden">
+                Cancel Edit
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- TAB 2: MANAGE EXISTING POSTS -->
+        <div id="adminTabPosts" class="admin-tab-panel hidden">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="font-bold text-xs sm:text-sm text-emerald-300 uppercase">All Uploaded Videos (<span id="adminTotalPostsCount">8</span>)</h3>
+          </div>
+          <div id="adminPostsList" class="space-y-2.5">
+        <div class="p-3 rounded-2xl bg-[#060a12] border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+          <div class="flex items-center gap-2.5">
+            <span class="px-2 py-0.5 rounded-lg font-bold text-[11px] bg-emerald-500/15 text-emerald-300 border border-emerald-500/35">9:16</span>
+            <div>
+              <div class="font-bold text-xs sm:text-sm text-white">Dogs Acting drama</div>
+              <div class="text-[11px] text-slate-400">Category: <span class="text-emerald-300">Latest</span> • Prompt: <span class="text-teal-300">https://igetintopc.exblog.jp/38850346/</span></div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <button data-move-up="0" class="admin-move-up px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300">↑</button>
+            <button data-move-down="0" class="admin-move-down px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300">↓</button>
+            <button data-edit-id="v_1792768745947" class="admin-edit-post px-2.5 py-1 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 text-xs font-semibold border border-emerald-500/30">Edit</button>
+            <button data-del-id="v_1792768745947" class="admin-del-post px-2.5 py-1 rounded-lg bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 text-xs font-semibold border border-rose-500/30">Delete</button>
+          </div>
+        </div>
+      
+        <div class="p-3 rounded-2xl bg-[#060a12] border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+          <div class="flex items-center gap-2.5">
+            <span class="px-2 py-0.5 rounded-lg font-bold text-[11px] bg-emerald-500/15 text-emerald-300 border border-emerald-500/35">9:16</span>
+            <div>
+              <div class="font-bold text-xs sm:text-sm text-white">atural Born Actors</div>
+              <div class="text-[11px] text-slate-400">Category: <span class="text-emerald-300">Latest</span> • Prompt: <span class="text-teal-300">https://igetintopc.exblog.jp/38850346/</span></div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <button data-move-up="1" class="admin-move-up px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300">↑</button>
+            <button data-move-down="1" class="admin-move-down px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300">↓</button>
+            <button data-edit-id="v_1792768659180" class="admin-edit-post px-2.5 py-1 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 text-xs font-semibold border border-emerald-500/30">Edit</button>
+            <button data-del-id="v_1792768659180" class="admin-del-post px-2.5 py-1 rounded-lg bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 text-xs font-semibold border border-rose-500/30">Delete</button>
+          </div>
+        </div>
+      
+        <div class="p-3 rounded-2xl bg-[#060a12] border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+          <div class="flex items-center gap-2.5">
+            <span class="px-2 py-0.5 rounded-lg font-bold text-[11px] bg-emerald-500/15 text-emerald-300 border border-emerald-500/35">9:16</span>
+            <div>
+              <div class="font-bold text-xs sm:text-sm text-white">One Small Hero</div>
+              <div class="text-[11px] text-slate-400">Category: <span class="text-emerald-300">Latest</span> • Prompt: <span class="text-teal-300">https://igetintopc.exblog.jp/38850346/</span></div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <button data-move-up="2" class="admin-move-up px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300">↑</button>
+            <button data-move-down="2" class="admin-move-down px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300">↓</button>
+            <button data-edit-id="v_1792759716715" class="admin-edit-post px-2.5 py-1 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 text-xs font-semibold border border-emerald-500/30">Edit</button>
+            <button data-del-id="v_1792759716715" class="admin-del-post px-2.5 py-1 rounded-lg bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 text-xs font-semibold border border-rose-500/30">Delete</button>
+          </div>
+        </div>
+      
+        <div class="p-3 rounded-2xl bg-[#060a12] border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+          <div class="flex items-center gap-2.5">
+            <span class="px-2 py-0.5 rounded-lg font-bold text-[11px] bg-emerald-500/15 text-emerald-300 border border-emerald-500/35">16:9</span>
+            <div>
+              <div class="font-bold text-xs sm:text-sm text-white">BLADE SHOWDOWN</div>
+              <div class="text-[11px] text-slate-400">Category: <span class="text-emerald-300">Trending</span> • Prompt: <span class="text-teal-300">https://igetintopc.exblog.jp/38850346/</span></div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <button data-move-up="3" class="admin-move-up px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300">↑</button>
+            <button data-move-down="3" class="admin-move-down px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300">↓</button>
+            <button data-edit-id="v_1792759601814" class="admin-edit-post px-2.5 py-1 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 text-xs font-semibold border border-emerald-500/30">Edit</button>
+            <button data-del-id="v_1792759601814" class="admin-del-post px-2.5 py-1 rounded-lg bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 text-xs font-semibold border border-rose-500/30">Delete</button>
+          </div>
+        </div>
+      
+        <div class="p-3 rounded-2xl bg-[#060a12] border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+          <div class="flex items-center gap-2.5">
+            <span class="px-2 py-0.5 rounded-lg font-bold text-[11px] bg-emerald-500/15 text-emerald-300 border border-emerald-500/35">16:9</span>
+            <div>
+              <div class="font-bold text-xs sm:text-sm text-white">Tiny Stylist</div>
+              <div class="text-[11px] text-slate-400">Category: <span class="text-emerald-300">Latest</span> • Prompt: <span class="text-teal-300">https://igetintopc.exblog.jp/38850346/</span></div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <button data-move-up="4" class="admin-move-up px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300">↑</button>
+            <button data-move-down="4" class="admin-move-down px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300">↓</button>
+            <button data-edit-id="v_1792756961289" class="admin-edit-post px-2.5 py-1 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 text-xs font-semibold border border-emerald-500/30">Edit</button>
+            <button data-del-id="v_1792756961289" class="admin-del-post px-2.5 py-1 rounded-lg bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 text-xs font-semibold border border-rose-500/30">Delete</button>
+          </div>
+        </div>
+      
+        <div class="p-3 rounded-2xl bg-[#060a12] border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+          <div class="flex items-center gap-2.5">
+            <span class="px-2 py-0.5 rounded-lg font-bold text-[11px] bg-emerald-500/15 text-emerald-300 border border-emerald-500/35">16:9</span>
+            <div>
+              <div class="font-bold text-xs sm:text-sm text-white">Spicy Revenge</div>
+              <div class="text-[11px] text-slate-400">Category: <span class="text-emerald-300">Latest</span> • Prompt: <span class="text-teal-300">https://igetintopc.exblog.jp/38850346/</span></div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <button data-move-up="5" class="admin-move-up px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300">↑</button>
+            <button data-move-down="5" class="admin-move-down px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300">↓</button>
+            <button data-edit-id="v_1792756875536" class="admin-edit-post px-2.5 py-1 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 text-xs font-semibold border border-emerald-500/30">Edit</button>
+            <button data-del-id="v_1792756875536" class="admin-del-post px-2.5 py-1 rounded-lg bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 text-xs font-semibold border border-rose-500/30">Delete</button>
+          </div>
+        </div>
+      
+        <div class="p-3 rounded-2xl bg-[#060a12] border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+          <div class="flex items-center gap-2.5">
+            <span class="px-2 py-0.5 rounded-lg font-bold text-[11px] bg-emerald-500/15 text-emerald-300 border border-emerald-500/35">9:16</span>
+            <div>
+              <div class="font-bold text-xs sm:text-sm text-white">Safe Home</div>
+              <div class="text-[11px] text-slate-400">Category: <span class="text-emerald-300">Viral</span> • Prompt: <span class="text-teal-300">https://igetintopc.exblog.jp/38607543/</span></div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <button data-move-up="6" class="admin-move-up px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300">↑</button>
+            <button data-move-down="6" class="admin-move-down px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300">↓</button>
+            <button data-edit-id="v_1792604954501" class="admin-edit-post px-2.5 py-1 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 text-xs font-semibold border border-emerald-500/30">Edit</button>
+            <button data-del-id="v_1792604954501" class="admin-del-post px-2.5 py-1 rounded-lg bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 text-xs font-semibold border border-rose-500/30">Delete</button>
+          </div>
+        </div>
+      
+        <div class="p-3 rounded-2xl bg-[#060a12] border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+          <div class="flex items-center gap-2.5">
+            <span class="px-2 py-0.5 rounded-lg font-bold text-[11px] bg-emerald-500/15 text-emerald-300 border border-emerald-500/35">16:9</span>
+            <div>
+              <div class="font-bold text-xs sm:text-sm text-white">A Little Courage Goes a Long Way</div>
+              <div class="text-[11px] text-slate-400">Category: <span class="text-emerald-300">Viral</span> • Prompt: <span class="text-teal-300">https://igetintopc.exblog.jp/38608005/</span></div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <button data-move-up="7" class="admin-move-up px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300">↑</button>
+            <button data-move-down="7" class="admin-move-down px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300">↓</button>
+            <button data-edit-id="v_1792602855190" class="admin-edit-post px-2.5 py-1 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 text-xs font-semibold border border-emerald-500/30">Edit</button>
+            <button data-del-id="v_1792602855190" class="admin-del-post px-2.5 py-1 rounded-lg bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 text-xs font-semibold border border-rose-500/30">Delete</button>
+          </div>
+        </div>
+      </div>
+        </div>
+
+        <!-- TAB 3: ADJUST 9:16 & 16:9 ROWS -->
+        <div id="adminTabRows" class="admin-tab-panel hidden space-y-5">
+          <div class="p-4 sm:p-5 rounded-2xl bg-[#060a12] border border-emerald-500/30 space-y-4">
+            <h3 class="font-bold text-sm sm:text-base text-emerald-300">9:16 &amp; 16:9 Row Arrangement</h3>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1">Row Sequence</label>
+                <select id="adminRowOrderSelect" class="w-full bg-[#04070d] text-white text-xs sm:text-sm rounded-xl px-3 py-2 border border-emerald-500/35">
+                  <option value="9:16-first">Row 1: Vertical (9:16) → Row 2: Wide (16:9)</option>
+                  <option value="16:9-first">Row 1: Wide (16:9) → Row 2: Vertical (9:16)</option>
+                  <option value="alternating">Alternating Rows (Vertical → Wide → Vertical...)</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1">Row Layout Mode</label>
+                <select id="adminRowStyleSelect" class="w-full bg-[#04070d] text-white text-xs sm:text-sm rounded-xl px-3 py-2 border border-emerald-500/35">
+                  <option value="grid">Responsive Grid Rows</option>
+                  <option value="carousel">Horizontal Swipe Slider</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1">Card Size Density</label>
+                <select id="adminCardDensitySelect" class="w-full bg-[#04070d] text-white text-xs sm:text-sm rounded-xl px-3 py-2 border border-emerald-500/35">
+                  <option value="standard">Standard Balanced</option>
+                  <option value="compact">Compact (More Cards Per Row)</option>
+                  <option value="large">Large Cards</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
+              <div>
+                <label class="block text-xs font-semibold text-emerald-300 mb-1">Vertical Row Heading (Optional)</label>
+                <input id="adminRow916TitleInput" type="text" placeholder="Leave blank for clean seamless row" class="w-full bg-[#04070d] text-white text-xs sm:text-sm rounded-xl px-3.5 py-2 border border-emerald-500/35">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-teal-300 mb-1">Widescreen Row Heading (Optional)</label>
+                <input id="adminRow169TitleInput" type="text" placeholder="Leave blank for clean seamless row" class="w-full bg-[#04070d] text-white text-xs sm:text-sm rounded-xl px-3.5 py-2 border border-teal-500/35">
+              </div>
+            </div>
+
+            <button id="saveRowSettingsBtn" class="px-5 py-2 rounded-xl font-bold text-xs btn-emerald-glow">
+              ✓ Save Row Layout Settings
+            </button>
+          </div>
+        </div>
+
+        <!-- TAB 4: TOP PROMO STRIP, HERO, LOGO & WHATSAPP -->
+        <div id="adminTabSettings" class="admin-tab-panel hidden space-y-5">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            
+            <div class="p-4 sm:p-5 rounded-2xl bg-[#060a12] border border-amber-500/35 space-y-3">
+              <h3 class="font-bold text-xs sm:text-sm text-amber-400 uppercase">Top Center Header Strip &amp; WhatsApp</h3>
+
+              <div class="grid grid-cols-2 gap-2.5">
+                <div>
+                  <label class="block text-[11px] text-slate-400 mb-1">Strip Brand Title</label>
+                  <input id="settingBannerBrand" type="text" class="w-full bg-[#04070d] text-white text-xs rounded-xl px-3 py-2 border border-slate-700">
+                </div>
+                <div>
+                  <label class="block text-[11px] text-slate-400 mb-1">Price Text</label>
+                  <input id="settingBannerPrice" type="text" class="w-full bg-[#04070d] text-white text-xs rounded-xl px-3 py-2 border border-slate-700">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-2.5">
+                <div>
+                  <label class="block text-[11px] text-slate-400 mb-1">Strip Center Text</label>
+                  <input id="settingBannerHeadline" type="text" class="w-full bg-[#04070d] text-white text-xs rounded-xl px-3 py-2 border border-slate-700">
+                </div>
+                <div>
+                  <label class="block text-[11px] text-slate-400 mb-1">Gold Badge Text</label>
+                  <input id="settingBannerSubPill" type="text" class="w-full bg-[#04070d] text-white text-xs rounded-xl px-3 py-2 border border-slate-700">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-2.5">
+                <div>
+                  <label class="block text-[11px] text-emerald-400 font-semibold mb-1">WhatsApp Number</label>
+                  <input id="settingWhatsAppNumber" type="text" placeholder="+92 3346599257" class="w-full bg-[#04070d] text-white text-xs rounded-xl px-3 py-2 border border-emerald-500/40">
+                </div>
+                <div>
+                  <label class="block text-[11px] text-emerald-400 font-semibold mb-1">Floating Button Corner</label>
+                  <select id="settingWhatsAppPos" class="w-full bg-[#04070d] text-white text-xs rounded-xl px-3 py-2 border border-emerald-500/40">
+                    <option value="left">Bottom-Left</option>
+                    <option value="right">Bottom-Right</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-2.5">
+                <div>
+                  <label class="block text-[11px] text-slate-400 mb-1">Hero Line 1 (White)</label>
+                  <input id="settingHeroLine1" type="text" class="w-full bg-[#04070d] text-white text-xs rounded-xl px-3 py-2 border border-slate-700">
+                </div>
+                <div>
+                  <label class="block text-[11px] text-slate-400 mb-1">Hero Line 2 (Teal)</label>
+                  <input id="settingHeroLine2" type="text" class="w-full bg-[#04070d] text-white text-xs rounded-xl px-3 py-2 border border-slate-700">
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-[11px] text-teal-300 mb-1">Admin Password</label>
+                <input id="settingAdminPass" type="text" class="w-full bg-[#04070d] text-white text-xs rounded-xl px-3 py-2 border border-teal-500/40">
+              </div>
+
+              <button id="saveBrandingBtn" class="w-full py-2.5 rounded-xl font-bold text-xs btn-emerald-glow">
+                ✓ Save Strip, Hero &amp; WhatsApp Settings
+              </button>
+            </div>
+
+            <!-- Categories Manager -->
+            <div class="p-4 sm:p-5 rounded-2xl bg-[#060a12] border border-teal-500/30 space-y-3">
+              <h3 class="font-bold text-xs sm:text-sm text-teal-300 uppercase">Manage Categories</h3>
+              <div class="flex gap-2">
+                <input id="newCategoryInput" type="text" placeholder="New category name..." class="flex-1 bg-[#04070d] text-white text-xs sm:text-sm rounded-xl px-3 py-2 border border-slate-700">
+                <button id="addCategoryBtn" class="px-4 py-2 rounded-xl font-bold text-xs btn-emerald-glow">
+                  + Add
+                </button>
+              </div>
+              <div id="adminCategoriesList" class="flex flex-wrap gap-2 pt-2">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+          <span>Latest</span>
+          <button data-del-cat="Latest" class="del-cat-btn text-rose-400 hover:text-rose-200 font-bold">✕</button>
+        </span>
+      
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+          <span>Trending</span>
+          <button data-del-cat="Trending" class="del-cat-btn text-rose-400 hover:text-rose-200 font-bold">✕</button>
+        </span>
+      
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+          <span>Viral</span>
+          <button data-del-cat="Viral" class="del-cat-btn text-rose-400 hover:text-rose-200 font-bold">✕</button>
+        </span>
+      
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+          <span>3D AI</span>
+          <button data-del-cat="3D AI" class="del-cat-btn text-rose-400 hover:text-rose-200 font-bold">✕</button>
+        </span>
+      
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+          <span>Cinematic</span>
+          <button data-del-cat="Cinematic" class="del-cat-btn text-rose-400 hover:text-rose-200 font-bold">✕</button>
+        </span>
+      </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="neonToast" class="fixed bottom-5 right-5 z-50 px-4 py-2.5 rounded-2xl glass-modal text-xs font-semibold text-emerald-300 shadow-2xl hidden">✓ Video Updated!</div>
+
+  <script>
+    const DEFAULT_STATE = {
+  "logoPrefix": "ZZ",
+  "logoMain": "Viral Prompts",
+  "bannerBrand": "C-Dance 2.5",
+  "bannerHeadline": "Generate Unlimited Videos",
+  "bannerSubPill": "Lifetime Access",
+  "bannerPrice": "Only $3.50",
+  "heroBadge": "VIRAL AI VIDEOS & ONE-CLICK PROMPTS HUB",
+  "heroLine1": "Discover & Create Next-Gen",
+  "heroLine2": "Viral AI Videos & Prompts",
+  "heroSub": "Tap any video thumbnail to watch in full quality, and click Prompt to open the exact generation prompt in a new tab.",
+  "whatsAppNumber": "+92 3346599257",
+  "whatsAppPos": "left",
+  "adminPass": "admin123",
+  "categories": [
+    "Latest",
+    "Trending",
+    "Viral",
+    "3D AI",
+    "Cinematic"
+  ],
+  "rowOrder": "9:16-first",
+  "rowStyle": "grid",
+  "cardDensity": "standard",
+  "row916Title": "",
+  "row169Title": "",
+  "videos": [
+    {
+      "id": "v_1792768745947",
+      "title": "Dogs Acting drama",
+      "ratio": "9:16",
+      "category": "Latest",
+      "promptLink": "https://igetintopc.exblog.jp/38850346/",
+      "videoUrl": "https://res.cloudinary.com/s0cx2xpd/video/upload/v1792768551/Red-10.mp4",
+      "thumbUrl": "https://res.cloudinary.com/s0cx2xpd/image/upload/v1792768526/Dogs_Acting_drama.jpg",
+      "themeHue": 160
+    },
+    {
+      "id": "v_1792768659180",
+      "title": "atural Born Actors",
+      "ratio": "9:16",
+      "category": "Latest",
+      "promptLink": "https://igetintopc.exblog.jp/38850346/",
+      "videoUrl": "https://res.cloudinary.com/s0cx2xpd/video/upload/v1792768551/Red-11.mp4",
+      "thumbUrl": "https://res.cloudinary.com/s0cx2xpd/image/upload/v1792768527/Natural_Born_Actors.jpg",
+      "themeHue": 176
+    },
+    {
+      "id": "v_1792759716715",
+      "title": "One Small Hero",
+      "ratio": "9:16",
+      "category": "Latest",
+      "promptLink": "https://igetintopc.exblog.jp/38850346/",
+      "videoUrl": "https://res.cloudinary.com/s0cx2xpd/video/upload/v1792758242/01_file.mp4",
+      "thumbUrl": "https://res.cloudinary.com/s0cx2xpd/image/upload/v1792759515/OS_Hero_TN.jpg",
+      "themeHue": 178
+    },
+    {
+      "id": "v_1792759601814",
+      "title": "BLADE SHOWDOWN",
+      "ratio": "16:9",
+      "category": "Trending",
+      "promptLink": "https://igetintopc.exblog.jp/38850346/",
+      "videoUrl": "https://res.cloudinary.com/s0cx2xpd/video/upload/v1792758096/Red-6.mp4",
+      "thumbUrl": "https://res.cloudinary.com/s0cx2xpd/image/upload/v1792759525/BLADE_SHOWDOWN.jpg",
+      "themeHue": 176
+    },
+    {
+      "id": "v_1792756961289",
+      "title": "Tiny Stylist",
+      "ratio": "16:9",
+      "category": "Latest",
+      "promptLink": "https://igetintopc.exblog.jp/38850346/",
+      "videoUrl": "https://res.cloudinary.com/s0cx2xpd/video/upload/v1792756554/Red-8.mp4",
+      "thumbUrl": "https://res.cloudinary.com/s0cx2xpd/image/upload/v1792756593/TS_Thumbnail.jpg",
+      "themeHue": 168
+    },
+    {
+      "id": "v_1792756875536",
+      "title": "Spicy Revenge",
+      "ratio": "16:9",
+      "category": "Latest",
+      "promptLink": "https://igetintopc.exblog.jp/38850346/",
+      "videoUrl": "https://res.cloudinary.com/s0cx2xpd/video/upload/v1792756379/Red-9.mp4",
+      "thumbUrl": "https://res.cloudinary.com/s0cx2xpd/image/upload/v1792756591/SR_Thumbnail.jpg",
+      "themeHue": 184
+    },
+    {
+      "id": "v_1792604954501",
+      "title": "Safe Home",
+      "ratio": "9:16",
+      "category": "Viral",
+      "promptLink": "https://igetintopc.exblog.jp/38607543/",
+      "videoUrl": "https://res.cloudinary.com/s0cx2xpd/video/upload/v1792604842/safe_home.mp4",
+      "thumbUrl": "https://res.cloudinary.com/s0cx2xpd/image/upload/v1792769431/New_Life.jpg",
+      "themeHue": 158
+    },
+    {
+      "id": "v_1792602855190",
+      "title": "A Little Courage Goes a Long Way",
+      "ratio": "16:9",
+      "category": "Viral",
+      "promptLink": "https://igetintopc.exblog.jp/38608005/",
+      "videoUrl": "https://res.cloudinary.com/s0cx2xpd/video/upload/v1792602368/Reference_Video.mp4",
+      "thumbUrl": "https://res.cloudinary.com/s0cx2xpd/video/upload/v1792602368/Reference_Video.jpg",
+      "themeHue": 169
+    }
+  ]
+};
+    let state = JSON.parse(JSON.stringify(DEFAULT_STATE));
+    try {
+      const saved = localStorage.getItem("ZZVIRAL_PROMPTS_STATE_V6");
+      if (saved) state = Object.assign({}, DEFAULT_STATE, JSON.parse(saved));
+    } catch (e) {}
+
+    let activeCategory = "All";
+    let searchQuery = "";
+    let isAdminUnlocked = false;
+
+    function saveState() {
+      try {
+        localStorage.setItem("ZZVIRAL_PROMPTS_STATE_V6", JSON.stringify(state));
+      } catch (e) {}
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById("neonToast");
+      t.textContent = msg;
+      t.classList.remove("hidden");
+      clearTimeout(window._toastTimer);
+      window._toastTimer = setTimeout(() => t.classList.add("hidden"), 3000);
+    }
+
+    function extractYouTubeId(url) {
+      if (!url) return null;
+      const m = url.match(/(?:youtube\.com\/(?:watch\?v=|shorts\/|embed\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+      return m ? m[1] : null;
+    }
+
+    // Secret 3x Logo Click (Zero Public Hints)
+    let logoClickCount = 0;
+    let logoClickTimer = null;
+    document.getElementById("siteLogoBtn").addEventListener("click", () => {
+      logoClickCount++;
+      clearTimeout(logoClickTimer);
+      if (logoClickCount >= 3) {
+        logoClickCount = 0;
+        const editBtn = document.getElementById("editWebsiteBtn");
+        editBtn.classList.remove("hidden");
+        editBtn.classList.add("flex");
+        if (isAdminUnlocked) {
+          openAdminDashboard();
+        } else {
+          document.getElementById("adminLoginModal").classList.remove("hidden");
+          document.getElementById("adminLoginModal").classList.add("flex");
+          document.getElementById("adminPasswordInput").focus();
+        }
+      } else {
+        logoClickTimer = setTimeout(() => { logoClickCount = 0; }, 1100);
+      }
+    });
+
+    document.getElementById("editWebsiteBtn").addEventListener("click", () => {
+      if (isAdminUnlocked) {
+        openAdminDashboard();
+      } else {
+        document.getElementById("adminLoginModal").classList.remove("hidden");
+        document.getElementById("adminLoginModal").classList.add("flex");
+      }
+    });
+
+    document.getElementById("closeAdminLoginBtn").addEventListener("click", () => {
+      document.getElementById("adminLoginModal").classList.add("hidden");
+      document.getElementById("adminLoginModal").classList.remove("flex");
+    });
+
+    document.getElementById("adminLoginForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const val = document.getElementById("adminPasswordInput").value.trim();
+      if (val === state.adminPass) {
+        isAdminUnlocked = true;
+        document.getElementById("adminLoginError").classList.add("hidden");
+        document.getElementById("adminLoginModal").classList.add("hidden");
+        document.getElementById("adminLoginModal").classList.remove("flex");
+        document.getElementById("adminPasswordInput").value = "";
+        openAdminDashboard();
+      } else {
+        document.getElementById("adminLoginError").classList.remove("hidden");
+      }
+    });
+
+    document.getElementById("navLatestLink").addEventListener("click", () => { activeCategory = "Latest"; renderAll(); });
+    document.getElementById("navTrendingLink").addEventListener("click", () => { activeCategory = "Trending"; renderAll(); });
+    document.getElementById("navViralLink").addEventListener("click", () => { activeCategory = "Viral"; renderAll(); });
+
+    function renderAll() {
+      // Update Small Top-Center Header Strip
+      document.getElementById("bannerBrandText").textContent = state.bannerBrand || "C-Dance 2.5";
+      document.getElementById("bannerHeadlineText").textContent = state.bannerHeadline || "Generate Unlimited Videos";
+      document.getElementById("bannerSubPillText").textContent = state.bannerSubPill || "Lifetime Access";
+      document.getElementById("bannerPriceText").textContent = state.bannerPrice || "Only $3.50";
+      document.getElementById("bannerPhoneText").textContent = state.whatsAppNumber || "+92 3346599257";
+
+      // Update Brand & Hero
+      document.getElementById("logoZZText").textContent = state.logoPrefix;
+      document.getElementById("logoMainText").textContent = state.logoMain;
+      document.getElementById("heroBadgeText").textContent = state.heroBadge;
+      document.getElementById("heroTitleLine1").textContent = state.heroLine1;
+      document.getElementById("heroTitleLine2").textContent = state.heroLine2;
+      document.getElementById("heroSubtitleText").textContent = state.heroSub;
+
+      // Update WhatsApp Links & Position
+      const waClean = (state.whatsAppNumber || "+92 3346599257").replace(/[^0-9]/g, "");
+      const waUrl = `https://wa.me/${waClean}`;
+      const waBtn = document.getElementById("floatingWhatsAppBtn");
+      waBtn.href = waUrl;
+      document.getElementById("heroContactBtn").href = waUrl;
+      document.getElementById("topPromoBannerLink").href = `${waUrl}?text=${encodeURIComponent("Hi, I want " + (state.bannerBrand || "C-Dance 2.5") + " (" + (state.bannerPrice || "Only $3.50") + ")")}`;
+
+      if (state.whatsAppPos === "right") {
+        waBtn.classList.remove("left-4", "sm:left-6");
+        waBtn.classList.add("right-4", "sm:right-6");
+      } else {
+        waBtn.classList.remove("right-4", "sm:right-6");
+        waBtn.classList.add("left-4", "sm:left-6");
+      }
+
+      // Render Category Pills
+      const catBar = document.getElementById("categoryFilterBar");
+      const allCats = ["All", ...state.categories];
+      catBar.innerHTML = allCats.map(cat => {
+        const active = cat === activeCategory;
+        return `<button data-cat="${cat}" class="cat-pill-btn whitespace-nowrap px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-bold tracking-wide transition-all ${
+          active
+            ? "btn-emerald-glow"
+            : "bg-[#0b1322]/90 text-slate-300 border border-emerald-500/25 hover:border-emerald-400 hover:text-white"
+        }">${cat}</button>`;
+      }).join("");
+
+      catBar.querySelectorAll(".cat-pill-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          activeCategory = btn.getAttribute("data-cat");
+          renderAll();
+        });
+      });
+
+      const filtered = state.videos.filter(v => {
+        const matchCat = activeCategory === "All" || v.category.toLowerCase() === activeCategory.toLowerCase();
+        const matchSearch = !searchQuery || v.title.toLowerCase().includes(searchQuery) || v.category.toLowerCase().includes(searchQuery);
+        return matchCat && matchSearch;
+      });
+
+      const v916 = filtered.filter(v => v.ratio === "9:16");
+      const v169 = filtered.filter(v => v.ratio === "16:9");
+
+      const container = document.getElementById("videoRowsContainer");
+      container.innerHTML = "";
+
+      if (state.rowOrder === "alternating") {
+        const chunk916Size = state.cardDensity === "compact" ? 5 : state.cardDensity === "large" ? 3 : 4;
+        const chunk169Size = state.cardDensity === "compact" ? 4 : state.cardDensity === "large" ? 2 : 4;
+        let i9 = 0, i16 = 0;
+        while (i9 < v916.length || i16 < v169.length) {
+          if (i9 < v916.length) {
+            container.appendChild(buildRowElement(state.row916Title, "9:16", v916.slice(i9, i9 + chunk916Size)));
+            i9 += chunk916Size;
+          }
+          if (i16 < v169.length) {
+            container.appendChild(buildRowElement(state.row169Title, "16:9", v169.slice(i16, i16 + chunk169Size)));
+            i16 += chunk169Size;
+          }
+        }
+      } else {
+        const rows = state.rowOrder === "9:16-first"
+          ? [
+              { title: state.row916Title, ratio: "9:16", items: v916 },
+              { title: state.row169Title, ratio: "16:9", items: v169 }
+            ]
+          : [
+              { title: state.row169Title, ratio: "16:9", items: v169 },
+              { title: state.row916Title, ratio: "9:16", items: v916 }
+            ];
+
+        rows.forEach(r => {
+          if (r.items.length > 0) {
+            container.appendChild(buildRowElement(r.title, r.ratio, r.items));
+          }
+        });
+
+        if (v916.length === 0 && v169.length === 0) {
+          container.innerHTML = `<div class="p-8 rounded-2xl bg-[#09101d]/80 border border-slate-800 text-center text-slate-400 text-xs sm:text-sm">No videos found in this category yet.</div>`;
+        }
+      }
+
+      initProceduralCanvases();
+    }
+
+    // Mobile & PC Balanced Grid Columns (2 Columns on Mobile for BOTH 9:16 & 16:9 so widgets look neat and compact!)
+    function getGridColsClass(ratio) {
+      if (state.rowStyle === "carousel") return "flex overflow-x-auto no-scrollbar gap-2.5 sm:gap-4 pb-2 snap-x";
+      if (ratio === "9:16") {
+        if (state.cardDensity === "compact") return "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2.5 sm:gap-4";
+        if (state.cardDensity === "large") return "grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-5";
+        return "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2.5 sm:gap-4";
+      } else {
+        if (state.cardDensity === "compact") return "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-4";
+        if (state.cardDensity === "large") return "grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-5";
+        return "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-4";
+      }
+    }
+
+    function pauseAllOtherVideos(exceptVideo) {
+      document.querySelectorAll(".video-media-area video").forEach(v => {
+        if (v !== exceptVideo && !v.paused) {
+          v.pause();
+          const area = v.closest(".video-media-area");
+          area?.querySelector(".thumb-overlay")?.classList.remove("opacity-0", "pointer-events-none");
+          area?.querySelector(".play-badge")?.classList.remove("opacity-0");
+        }
+      });
+    }
+
+    function buildRowElement(title, ratio, items) {
+      const sec = document.createElement("section");
+      sec.className = "space-y-3";
+
+      const headerHTML = title
+        ? `<div class="flex items-center justify-between gap-4 border-b border-emerald-500/20 pb-2">
+             <h2 class="font-bold text-sm sm:text-lg text-white tracking-wide">${title}</h2>
+           </div>`
+        : "";
+
+      sec.innerHTML = `
+        ${headerHTML}
+        <div class="${getGridColsClass(ratio)}">${items.map(v => buildVideoCardHTML(v)).join("")}</div>
+      `;
+
+      sec.querySelectorAll(".video-media-area").forEach(area => {
+        const videoEl = area.querySelector("video");
+        const thumbOverlay = area.querySelector(".thumb-overlay");
+        const playBadge = area.querySelector(".play-badge");
+        const muteBtn = area.querySelector(".mute-toggle-btn");
+        const fsBtn = area.querySelector(".fs-toggle-btn");
+
+        if (muteBtn && videoEl) {
+          muteBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            videoEl.muted = !videoEl.muted;
+            muteBtn.textContent = videoEl.muted ? "🔇" : "🔊";
+          });
+        }
+
+        if (fsBtn && videoEl) {
+          fsBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            if (videoEl.requestFullscreen) videoEl.requestFullscreen();
+            else if (videoEl.webkitEnterFullscreen) videoEl.webkitEnterFullscreen();
+          });
+        }
+
+        area.addEventListener("click", (e) => {
+          if (e.target.closest(".card-prompt-link") || e.target.closest(".video-top-ctrl")) return;
+
+          const ytId = area.getAttribute("data-yt-id");
+          if (ytId && !area.querySelector("iframe")) {
+            pauseAllOtherVideos(null);
+            const iframe = document.createElement("iframe");
+            iframe.src = `https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0&playsinline=1`;
+            iframe.className = "w-full h-full object-cover absolute inset-0 z-10";
+            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+            iframe.allowFullscreen = true;
+            area.appendChild(iframe);
+            thumbOverlay?.classList.add("opacity-0", "pointer-events-none");
+            playBadge?.classList.add("opacity-0");
+            return;
+          }
+
+          if (videoEl) {
+            if (videoEl.paused) {
+              pauseAllOtherVideos(videoEl);
+              videoEl.play().then(() => {
+                thumbOverlay?.classList.add("opacity-0", "pointer-events-none");
+                playBadge?.classList.add("opacity-0");
+              }).catch(() => {
+                videoEl.muted = true;
+                if (muteBtn) muteBtn.textContent = "🔇";
+                videoEl.play();
+                thumbOverlay?.classList.add("opacity-0", "pointer-events-none");
+                playBadge?.classList.add("opacity-0");
+              });
+            } else {
+              videoEl.pause();
+              playBadge?.classList.remove("opacity-0");
+            }
+          }
+        });
+      });
+
+      return sec;
+    }
+
+    function buildVideoCardHTML(v) {
+      const is916 = v.ratio === "9:16";
+      const carouselItemWidth = state.rowStyle === "carousel"
+        ? (is916 ? "min-w-[155px] sm:min-w-[220px] snap-start" : "min-w-[220px] sm:min-w-[310px] snap-start")
+        : "";
+
+      const ytId = extractYouTubeId(v.videoUrl);
+      const effectiveThumb = v.thumbUrl || (ytId ? `https://img.youtube.com/vi/${ytId}/hqdefault.jpg` : "");
+
+      const videoLayerHTML = (!ytId && v.videoUrl)
+        ? `<video src="${v.videoUrl}" ${effectiveThumb ? `poster="${effectiveThumb}"` : ""} loop playsinline preload="metadata" class="w-full h-full object-cover"></video>`
+        : "";
+
+      const thumbLayerHTML = effectiveThumb
+        ? `<img src="${effectiveThumb}" alt="${v.title}" class="thumb-overlay absolute inset-0 w-full h-full object-cover transition-opacity duration-300 pointer-events-none" />`
+        : `<canvas class="procedural-ai-canvas thumb-overlay absolute inset-0 w-full h-full object-cover transition-opacity duration-300 pointer-events-none" data-hue="${v.themeHue || 165}"></canvas>`;
+
+      return `
+        <article class="video-card rounded-xl sm:rounded-2xl overflow-hidden flex flex-col ${carouselItemWidth}">
+          <div data-id="${v.id}" ${ytId ? `data-yt-id="${ytId}"` : ""} class="video-media-area relative w-full ${is916 ? 'aspect-9-16' : 'aspect-16-9'} bg-[#050912] overflow-hidden cursor-pointer group">
+            
+            ${videoLayerHTML}
+            ${thumbLayerHTML}
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-black/30 pointer-events-none z-10"></div>
+
+            <!-- Top-Left Category Badge & Top-Right Audio/Fullscreen Controls -->
+            <div class="absolute top-2 left-2 right-2 flex items-center justify-between gap-1 z-20">
+              <span class="px-2 py-0.5 rounded-full text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-black/70 text-[#2dd4bf] border border-emerald-400/35 backdrop-blur-md pointer-events-none">
+                ${v.category}
+              </span>
+
+              ${!ytId && v.videoUrl ? `
+              <div class="video-top-ctrl flex items-center gap-1">
+                <button type="button" class="mute-toggle-btn w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-black/65 hover:bg-black/85 border border-white/15 text-[10px] flex items-center justify-center text-white backdrop-blur-md" title="Mute / Unmute">🔊</button>
+                <button type="button" class="fs-toggle-btn w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-black/65 hover:bg-black/85 border border-white/15 text-[10px] flex items-center justify-center text-white backdrop-blur-md" title="Fullscreen">⛶</button>
+              </div>
+              ` : ""}
+            </div>
+
+            <!-- Center Play Button Overlay -->
+            <div class="play-badge absolute inset-0 flex items-center justify-center pointer-events-none z-20 transition-all duration-200 group-hover:scale-110">
+              <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-black/65 border border-[#10b981] flex items-center justify-center text-[#2dd4bf] text-xs sm:text-base shadow-[0_0_20px_rgba(16,185,129,0.6)]">
+                ▶
+              </div>
+            </div>
+
+            <!-- Bottom-Left Title & Bottom-Right "Prompt" Button -->
+            <div class="absolute bottom-2 left-2 right-2 sm:bottom-2.5 sm:left-2.5 sm:right-2.5 flex items-end justify-between gap-1.5 z-20">
+              <div class="pr-1 pointer-events-none min-w-0">
+                <h3 class="font-bold text-[10px] sm:text-sm text-white leading-tight line-clamp-2 drop-shadow-md">${v.title}</h3>
+              </div>
+
+              <a href="${v.promptLink || '#'}" target="_blank" rel="noopener noreferrer"
+                class="card-prompt-link shrink-0 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg sm:rounded-xl font-extrabold text-[9px] sm:text-xs prompt-btn flex items-center gap-0.5">
+                <span>Prompt</span>
+                <span>↗</span>
+              </a>
+            </div>
+
+          </div>
+        </article>
+      `;
+    }
+
+    document.getElementById("searchInput").addEventListener("input", (e) => {
+      searchQuery = e.target.value.trim().toLowerCase();
+      renderAll();
+    });
+
+    // =========================================================================
+    // ADMIN STUDIO DASHBOARD LOGIC
+    // =========================================================================
+    function openAdminDashboard() {
+      populateAdminDashboard();
+      const modal = document.getElementById("adminDashboardModal");
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+
+    document.getElementById("closeAdminDashboardBtn").addEventListener("click", () => {
+      const modal = document.getElementById("adminDashboardModal");
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    });
+
+    document.querySelectorAll(".admin-tab-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const target = btn.getAttribute("data-admin-tab");
+        document.querySelectorAll(".admin-tab-btn").forEach(b => {
+          b.className = "admin-tab-btn whitespace-nowrap px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-800/90 text-slate-300 hover:text-white";
+        });
+        btn.className = "admin-tab-btn whitespace-nowrap px-3.5 py-1.5 rounded-xl text-xs font-bold bg-[#10b981] text-black";
+
+        document.getElementById("adminTabUpload").classList.toggle("hidden", target !== "upload");
+        document.getElementById("adminTabPosts").classList.toggle("hidden", target !== "posts");
+        document.getElementById("adminTabRows").classList.toggle("hidden", target !== "rows");
+        document.getElementById("adminTabSettings").classList.toggle("hidden", target !== "settings");
+      });
+    });
+
+    document.getElementById("postVideoUrlInput").addEventListener("input", (e) => {
+      const ytId = extractYouTubeId(e.target.value.trim());
+      const thumbInput = document.getElementById("postThumbUrlInput");
+      if (ytId && !thumbInput.value) {
+        thumbInput.value = `https://img.youtube.com/vi/${ytId}/hqdefault.jpg`;
+        const prev = document.getElementById("adminThumbPreview");
+        prev.src = thumbInput.value;
+        prev.classList.remove("hidden");
+        showToast("🖼️ YouTube Thumbnail Auto-Detected!");
+      }
+    });
+
+    document.getElementById("postVideoFileInput").addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const blobUrl = URL.createObjectURL(file);
+      document.getElementById("postVideoUrlInput").value = blobUrl;
+      showToast("🎬 Video loaded! Click 'Auto-Capture Thumbnail' or upload a thumbnail.");
+    });
+
+    document.getElementById("captureVideoFrameBtn").addEventListener("click", () => {
+      const videoUrl = document.getElementById("postVideoUrlInput").value.trim();
+      if (!videoUrl) {
+        showToast("⚠️ First select a video file or paste a direct .mp4 URL!");
+        return;
+      }
+      const ytId = extractYouTubeId(videoUrl);
+      if (ytId) {
+        const ytThumb = `https://img.youtube.com/vi/${ytId}/hqdefault.jpg`;
+        document.getElementById("postThumbUrlInput").value = ytThumb;
+        const prev = document.getElementById("adminThumbPreview");
+        prev.src = ytThumb;
+        prev.classList.remove("hidden");
+        showToast("📸 YouTube Thumbnail Set!");
+        return;
+      }
+
+      const tempVideo = document.createElement("video");
+      tempVideo.crossOrigin = "anonymous";
+      tempVideo.src = videoUrl;
+      tempVideo.muted = true;
+      tempVideo.currentTime = 1.0;
+
+      tempVideo.addEventListener("loadeddata", () => {
+        tempVideo.currentTime = Math.min(1.2, tempVideo.duration / 3 || 0.5);
+      });
+
+      tempVideo.addEventListener("seeked", () => {
+        try {
+          const c = document.createElement("canvas");
+          c.width = tempVideo.videoWidth || 640;
+          c.height = tempVideo.videoHeight || 360;
+          c.getContext("2d").drawImage(tempVideo, 0, 0, c.width, c.height);
+          const dataUrl = c.toDataURL("image/jpeg", 0.82);
+          document.getElementById("postThumbUrlInput").value = dataUrl;
+          const prev = document.getElementById("adminThumbPreview");
+          prev.src = dataUrl;
+          prev.classList.remove("hidden");
+          showToast("📸 Thumbnail captured from video frame!");
+        } catch (err) {
+          showToast("⚠️ External video blocks frame capture — please upload/paste a thumbnail image.");
+        }
+      });
+
+      tempVideo.addEventListener("error", () => {
+        showToast("⚠️ Could not load video frame — please upload or paste a thumbnail URL.");
+      });
+    });
+
+    document.getElementById("postThumbFileInput").addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        document.getElementById("postThumbUrlInput").value = ev.target.result;
+        const prev = document.getElementById("adminThumbPreview");
+        prev.src = ev.target.result;
+        prev.classList.remove("hidden");
+        showToast("🖼️ Thumbnail image loaded!");
+      };
+      reader.readAsDataURL(file);
+    });
+
+    function populateAdminDashboard() {
+      const catSelect = document.getElementById("postCategoryInput");
+      catSelect.innerHTML = state.categories.map(c => `<option value="${c}">${c}</option>`).join("");
+
+      document.getElementById("adminTotalPostsCount").textContent = state.videos.length;
+      const postsList = document.getElementById("adminPostsList");
+      postsList.innerHTML = state.videos.map((v, idx) => `
+        <div class="p-3 rounded-2xl bg-[#060a12] border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+          <div class="flex items-center gap-2.5">
+            <span class="px-2 py-0.5 rounded-lg font-bold text-[11px] bg-emerald-500/15 text-emerald-300 border border-emerald-500/35">${v.ratio}</span>
+            <div>
+              <div class="font-bold text-xs sm:text-sm text-white">${v.title}</div>
+              <div class="text-[11px] text-slate-400">Category: <span class="text-emerald-300">${v.category}</span> • Prompt: <span class="text-teal-300">${v.promptLink}</span></div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <button data-move-up="${idx}" class="admin-move-up px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300">↑</button>
+            <button data-move-down="${idx}" class="admin-move-down px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-slate-300">↓</button>
+            <button data-edit-id="${v.id}" class="admin-edit-post px-2.5 py-1 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 text-xs font-semibold border border-emerald-500/30">Edit</button>
+            <button data-del-id="${v.id}" class="admin-del-post px-2.5 py-1 rounded-lg bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 text-xs font-semibold border border-rose-500/30">Delete</button>
+          </div>
+        </div>
+      `).join("");
+
+      postsList.querySelectorAll(".admin-edit-post").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const vid = state.videos.find(x => x.id === btn.getAttribute("data-edit-id"));
+          if (!vid) return;
+          document.getElementById("editingVideoId").value = vid.id;
+          document.getElementById("postTitleInput").value = vid.title;
+          document.getElementById("postRatioInput").value = vid.ratio;
+          document.getElementById("postCategoryInput").value = vid.category;
+          document.getElementById("postPromptLinkInput").value = vid.promptLink;
+          document.getElementById("postVideoUrlInput").value = vid.videoUrl || "";
+          document.getElementById("postThumbUrlInput").value = vid.thumbUrl || "";
+          document.getElementById("saveVideoPostBtn").textContent = "✓ Update Video";
+          document.getElementById("cancelEditPostBtn").classList.remove("hidden");
+          document.querySelector('[data-admin-tab="upload"]').click();
+        });
+      });
+
+      postsList.querySelectorAll(".admin-del-post").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const id = btn.getAttribute("data-del-id");
+          state.videos = state.videos.filter(x => x.id !== id);
+          saveState();
+          populateAdminDashboard();
+          renderAll();
+          showToast("🗑️ Video deleted.");
+        });
+      });
+
+      postsList.querySelectorAll(".admin-move-up").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const idx = parseInt(btn.getAttribute("data-move-up"), 10);
+          if (idx > 0) {
+            [state.videos[idx - 1], state.videos[idx]] = [state.videos[idx], state.videos[idx - 1]];
+            saveState();
+            populateAdminDashboard();
+            renderAll();
+          }
+        });
+      });
+
+      postsList.querySelectorAll(".admin-move-down").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const idx = parseInt(btn.getAttribute("data-move-down"), 10);
+          if (idx < state.videos.length - 1) {
+            [state.videos[idx + 1], state.videos[idx]] = [state.videos[idx], state.videos[idx + 1]];
+            saveState();
+            populateAdminDashboard();
+            renderAll();
+          }
+        });
+      });
+
+      document.getElementById("adminRowOrderSelect").value = state.rowOrder;
+      document.getElementById("adminRowStyleSelect").value = state.rowStyle;
+      document.getElementById("adminCardDensitySelect").value = state.cardDensity;
+      document.getElementById("adminRow916TitleInput").value = state.row916Title;
+      document.getElementById("adminRow169TitleInput").value = state.row169Title;
+
+      document.getElementById("settingBannerBrand").value = state.bannerBrand || "C-Dance 2.5";
+      document.getElementById("settingBannerPrice").value = state.bannerPrice || "Only $3.50";
+      document.getElementById("settingBannerHeadline").value = state.bannerHeadline || "Generate Unlimited Videos";
+      document.getElementById("settingBannerSubPill").value = state.bannerSubPill || "Lifetime Access";
+      document.getElementById("settingHeroLine1").value = state.heroLine1;
+      document.getElementById("settingHeroLine2").value = state.heroLine2;
+      document.getElementById("settingWhatsAppNumber").value = state.whatsAppNumber;
+      document.getElementById("settingWhatsAppPos").value = state.whatsAppPos || "left";
+      document.getElementById("settingAdminPass").value = state.adminPass;
+
+      const catList = document.getElementById("adminCategoriesList");
+      catList.innerHTML = state.categories.map(c => `
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+          <span>${c}</span>
+          <button data-del-cat="${c}" class="del-cat-btn text-rose-400 hover:text-rose-200 font-bold">✕</button>
+        </span>
+      `).join("");
+
+      catList.querySelectorAll(".del-cat-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const c = btn.getAttribute("data-del-cat");
+          if (state.categories.length <= 1) return;
+          state.categories = state.categories.filter(x => x !== c);
+          saveState();
+          populateAdminDashboard();
+          renderAll();
+        });
+      });
+    }
+
+    document.getElementById("videoPostForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const editId = document.getElementById("editingVideoId").value;
+      const newPost = {
+        id: editId || "v_" + Date.now(),
+        title: document.getElementById("postTitleInput").value.trim(),
+        ratio: document.getElementById("postRatioInput").value,
+        category: document.getElementById("postCategoryInput").value,
+        promptLink: document.getElementById("postPromptLinkInput").value.trim(),
+        videoUrl: document.getElementById("postVideoUrlInput").value.trim(),
+        thumbUrl: document.getElementById("postThumbUrlInput").value.trim(),
+        themeHue: 155 + Math.floor(Math.random() * 40)
+      };
+
+      if (editId) {
+        const idx = state.videos.findIndex(x => x.id === editId);
+        if (idx !== -1) state.videos[idx] = newPost;
+        showToast("✓ Video Updated!");
+      } else {
+        state.videos.unshift(newPost);
+        showToast("🚀 New Video Published!");
+      }
+
+      document.getElementById("videoPostForm").reset();
+      document.getElementById("adminThumbPreview").classList.add("hidden");
+      document.getElementById("editingVideoId").value = "";
+      document.getElementById("saveVideoPostBtn").textContent = "🚀 Publish Video";
+      document.getElementById("cancelEditPostBtn").classList.add("hidden");
+      saveState();
+      populateAdminDashboard();
+      renderAll();
+    });
+
+    document.getElementById("cancelEditPostBtn").addEventListener("click", () => {
+      document.getElementById("videoPostForm").reset();
+      document.getElementById("adminThumbPreview").classList.add("hidden");
+      document.getElementById("editingVideoId").value = "";
+      document.getElementById("saveVideoPostBtn").textContent = "🚀 Publish Video";
+      document.getElementById("cancelEditPostBtn").classList.add("hidden");
+    });
+
+    document.getElementById("saveRowSettingsBtn").addEventListener("click", () => {
+      state.rowOrder = document.getElementById("adminRowOrderSelect").value;
+      state.rowStyle = document.getElementById("adminRowStyleSelect").value;
+      state.cardDensity = document.getElementById("adminCardDensitySelect").value;
+      state.row916Title = document.getElementById("adminRow916TitleInput").value.trim();
+      state.row169Title = document.getElementById("adminRow169TitleInput").value.trim();
+      saveState();
+      renderAll();
+      showToast("✓ Row Layout Updated!");
+    });
+
+    document.getElementById("saveBrandingBtn").addEventListener("click", () => {
+      state.bannerBrand = document.getElementById("settingBannerBrand").value.trim() || "C-Dance 2.5";
+      state.bannerPrice = document.getElementById("settingBannerPrice").value.trim() || "Only $3.50";
+      state.bannerHeadline = document.getElementById("settingBannerHeadline").value.trim() || "Generate Unlimited Videos";
+      state.bannerSubPill = document.getElementById("settingBannerSubPill").value.trim() || "Lifetime Access";
+      state.heroLine1 = document.getElementById("settingHeroLine1").value.trim() || state.heroLine1;
+      state.heroLine2 = document.getElementById("settingHeroLine2").value.trim() || state.heroLine2;
+      state.whatsAppNumber = document.getElementById("settingWhatsAppNumber").value.trim() || "+92 3346599257";
+      state.whatsAppPos = document.getElementById("settingWhatsAppPos").value;
+      state.adminPass = document.getElementById("settingAdminPass").value.trim() || "admin123";
+      saveState();
+      renderAll();
+      showToast("✓ Settings Saved!");
+    });
+
+    document.getElementById("addCategoryBtn").addEventListener("click", () => {
+      const val = document.getElementById("newCategoryInput").value.trim();
+      if (!val || state.categories.includes(val)) return;
+      state.categories.push(val);
+      document.getElementById("newCategoryInput").value = "";
+      saveState();
+      populateAdminDashboard();
+      renderAll();
+      showToast(`+ Category "${val}" added!`);
+    });
+
+    document.getElementById("exportVercelHtmlBtn").addEventListener("click", () => {
+      const htmlClone = document.documentElement.outerHTML.replace(
+        /const DEFAULT_STATE = \{[\s\S]*?\};\n\s*let state =/,
+        `const DEFAULT_STATE = ${JSON.stringify(state, null, 2)};\n    let state =`
+      );
+      const blob = new Blob(["<!DOCTYPE html>\n" + htmlClone], { type: "text/html" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "index.html";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      showToast("💾 Downloaded index.html ready for Vercel!");
+    });
+
+    // =========================================================================
+    // PROCEDURAL AI THUMBNAIL FALLBACK CANVAS
+    // =========================================================================
+    function initProceduralCanvases() {
+      document.querySelectorAll(".procedural-ai-canvas").forEach(canvas => {
+        const ctx = canvas.getContext("2d");
+        const hue = parseInt(canvas.getAttribute("data-hue") || "165", 10);
+        canvas.width = 300;
+        canvas.height = 300;
+        let frame = Math.random() * 100;
+        function drawLoop() {
+          if (!document.body.contains(canvas)) return;
+          frame += 0.025;
+          const w = canvas.width, h = canvas.height;
+          const grad = ctx.createRadialGradient(
+            w * (0.5 + 0.25 * Math.sin(frame)),
+            h * (0.5 + 0.25 * Math.cos(frame * 0.8)),
+            12, w * 0.5, h * 0.5, w * 0.75
+          );
+          grad.addColorStop(0, `hsla(${hue}, 95%, 52%, 0.9)`);
+          grad.addColorStop(0.55, `hsla(${(hue + 25) % 360}, 90%, 24%, 0.85)`);
+          grad.addColorStop(1, "#050912");
+          ctx.fillStyle = grad;
+          ctx.fillRect(0, 0, w, h);
+
+          ctx.strokeStyle = `hsla(${hue}, 100%, 70%, 0.45)`;
+          ctx.lineWidth = 1.5;
+          for (let i = 1; i <= 4; i++) {
+            ctx.beginPath();
+            const r = ((frame * 18 + i * 36) % 145) + 10;
+            ctx.arc(w / 2, h / 2, r, 0, Math.PI * 2);
+            ctx.stroke();
+          }
+          requestAnimationFrame(drawLoop);
+        }
+        drawLoop();
+      });
+    }
+
+    // =========================================================================
+    // 3D TRIANGULATED WIREFRAME MOUNTAIN / WAVE MESH BACKGROUND
+    // =========================================================================
+    (function init3DTerrainMesh() {
+      const canvas = document.getElementById("terrainWaveCanvas");
+      const ctx = canvas.getContext("2d");
+      let w = (canvas.width = window.innerWidth);
+      let h = (canvas.height = window.innerHeight);
+
+      window.addEventListener("resize", () => {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+      });
+
+      const cols = 36;
+      const rows = 20;
+      let time = 0;
+
+      function project3D(gx, gy, gz) {
+        const fov = 500;
+        const viewerDist = 600;
+        const scale = fov / (viewerDist + gz);
+        return {
+          x: w * 0.5 + gx * scale,
+          y: h * 0.55 + gy * scale
+        };
+      }
+
+      function animateTerrain() {
+        time += 0.018;
+        ctx.clearRect(0, 0, w, h);
+
+        const spacingX = Math.max(w, 1000) / (cols - 6);
+        const spacingZ = 42;
+        const vertices = [];
+
+        for (let r = 0; r < rows; r++) {
+          vertices[r] = [];
+          for (let c = 0; c < cols; c++) {
+            const nx = c - (cols - 1) / 2;
+            const gx = nx * spacingX;
+            const gz = r * spacingZ - 110;
+
+            const ridgeLeft = Math.exp(-Math.pow(nx + 7.2, 2) / 18) * 140;
+            const ridgeRight = Math.exp(-Math.pow(nx - 7.2, 2) / 18) * 130;
+            const wave =
+              Math.sin(c * 0.32 + time) * 26 +
+              Math.cos(r * 0.38 - time * 0.85) * 24;
+
+            const envZ = Math.sin((r / (rows - 1)) * Math.PI);
+            const gy = 160 - (ridgeLeft + ridgeRight + wave) * envZ;
+
+            vertices[r][c] = project3D(gx, gy, gz);
+          }
+        }
+
+        for (let r = 0; r < rows - 1; r++) {
+          const depthAlpha = Math.sin((r / (rows - 1)) * Math.PI) * 0.32;
+          ctx.strokeStyle = `rgba(16, 185, 129, ${depthAlpha.toFixed(3)})`;
+          ctx.lineWidth = 0.85;
+
+          for (let c = 0; c < cols - 1; c++) {
+            const p00 = vertices[r][c];
+            const p10 = vertices[r][c + 1];
+            const p01 = vertices[r + 1][c];
+            const p11 = vertices[r + 1][c + 1];
+
+            ctx.beginPath();
+            ctx.moveTo(p00.x, p00.y);
+            ctx.lineTo(p10.x, p10.y);
+            ctx.lineTo(p01.x, p01.y);
+            ctx.lineTo(p00.x, p00.y);
+            ctx.moveTo(p10.x, p10.y);
+            ctx.lineTo(p11.x, p11.y);
+            ctx.lineTo(p01.x, p01.y);
+            ctx.stroke();
+          }
+        }
+
+        requestAnimationFrame(animateTerrain);
+      }
+
+      animateTerrain();
+    })();
+
+    renderAll();
+  </script>
+
+</body></html>
